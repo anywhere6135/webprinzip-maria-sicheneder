@@ -1,0 +1,7 @@
+*.mp3
+*.mp4
+*.pdf
+*.docx
+*.xlsx
+*.txt
+!texte-und-design.md

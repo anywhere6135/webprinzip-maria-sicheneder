@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maria Sicheneder – Systemisches Coaching München & Online | Traumasensible Integration</title>
+<meta name="description" content="Systemisches Coaching in München & online für Selbständige, Unternehmer und Privatpersonen. Tiefe Veränderung statt Symptombehandlung – traumasensibel, ehrlich, ohne Schablonen. Kostenloses Erstgespräch.">
+<meta name="keywords" content="systemisches Coaching München, Coach für Selbständige München, Coaching Unternehmer München, traumasensibles Coaching, Coaching Blockaden lösen, Muster durchbrechen, Life Coaching online DACH, Coaching Privatpersonen München, systemischer Coach online, innere Blockaden Coach">
+<meta name="author" content="Maria Sicheneder">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Maria Sicheneder – Systemisches Coaching München & Online">
+<meta property="og:description" content="Coaching für Selbständige, Unternehmer und Privatpersonen. Systemisch, traumasensibel, ehrlich. Kostenloses Erstgespräch.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<style>
+
+:root {
+  --sand: #f5efe6; --sand-dark: #ede4d6; --warm-white: #faf8f4;
+  --clay: #c4987a; --clay-deep: #a57a5a;
+  --moss: #4a5c47; --moss-light: #6b7c68;
+  --charcoal: #2c2824; --charcoal-soft: #3d3730; --mist: #8c8078;
+  --rose: #c08b7a; --rose-light: #e8d5cc; --dusk: #7a6e8a;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'DM Sans',sans-serif; background:var(--warm-white); color:var(--charcoal); overflow-x:hidden; }
+
+/* AUDIENCE BAR */
+.audience-bar {
+  position:fixed; top:0; left:0; right:0; z-index:200;
+  height:3rem; background:var(--charcoal);
+  display:flex; align-items:center; justify-content:center; gap:0;
+}
+.aud-label { font-size:0.68rem; letter-spacing:0.18em; text-transform:uppercase; color:rgba(250,248,244,0.35); margin-right:1.2rem; }
+.toggle-wrap { display:flex; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:2px; overflow:hidden; }
+.toggle-btn {
+  padding:0.45rem 1.4rem; font-family:'DM Sans',sans-serif;
+  font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase;
+  color:rgba(250,248,244,0.45); background:transparent; border:none; cursor:pointer;
+  transition:all 0.25s;
+}
+.toggle-btn.active { background:var(--clay); color:white; }
+.toggle-divider { width:1px; background:rgba(255,255,255,0.1); align-self:stretch; }
+
+/* NAV */
+nav {
+  position:fixed; top:3rem; left:0; right:0; z-index:100;
+  padding:1.4rem 4rem; display:flex; align-items:center; justify-content:space-between;
+  background:rgba(250,248,244,0.93); backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(196,152,122,0.15); transition:padding 0.3s;
+}
+.nav-logo { font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-weight:500; letter-spacing:0.04em; color:var(--charcoal); text-decoration:none; }
+.nav-logo span { color:var(--clay); }
+.nav-links { display:flex; gap:2.5rem; list-style:none; align-items:center; }
+.nav-links a { font-size:0.82rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--mist); text-decoration:none; transition:color 0.25s; }
+.nav-links a:hover { color:var(--clay); }
+.nav-cta { background:var(--charcoal)!important; color:var(--warm-white)!important; padding:0.6rem 1.4rem; border-radius:2px; cursor:pointer; }
+.nav-cta:hover { background:var(--clay-deep)!important; }
+
+/* PANELS */
+.panel { display:none; padding-top:6rem; }
+.panel.active { display:block; }
+
+/* HERO */
+.hero { min-height:calc(100vh - 6rem); display:grid; grid-template-columns:1fr 1fr; align-items:center; position:relative; overflow:hidden; }
+.hero-bg { position:absolute; inset:0; pointer-events:none; }
+.hero-bg.biz { background: radial-gradient(ellipse 80% 60% at 70% 40%, rgba(196,152,122,0.08) 0%, transparent 60%), radial-gradient(ellipse 60% 80% at 20% 70%, rgba(74,92,71,0.06) 0%, transparent 60%); }
+.hero-bg.priv { background: radial-gradient(ellipse 70% 60% at 75% 35%, rgba(192,139,122,0.1) 0%, transparent 60%), radial-gradient(ellipse 50% 70% at 15% 75%, rgba(122,110,138,0.07) 0%, transparent 60%); }
+.hero-left { padding:6rem 4rem 5rem 6rem; position:relative; z-index:2; animation:fadeUp 0.8s ease forwards; }
+.hero-eyebrow { font-size:0.75rem; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1.8rem; display:flex; align-items:center; gap:0.8rem; }
+.hero-eyebrow::before { content:''; width:2rem; height:1px; display:block; }
+.biz .hero-eyebrow { color:var(--clay); } .biz .hero-eyebrow::before { background:var(--clay); }
+.priv .hero-eyebrow { color:var(--rose); } .priv .hero-eyebrow::before { background:var(--rose); }
+.hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(2.6rem,4.5vw,4rem); font-weight:300; line-height:1.2; color:var(--charcoal); margin-bottom:1.6rem; }
+.biz .hero h1 em { font-style:italic; color:var(--moss); }
+.priv .hero h1 em { font-style:italic; color:var(--dusk); }
+.hero-sub { font-size:1rem; line-height:1.75; color:var(--mist); max-width:44ch; margin-bottom:2.5rem; font-weight:300; }
+.hero-cta-group { display:flex; align-items:center; gap:2rem; }
+.hero-right { position:relative; height:calc(100vh - 6rem); overflow:hidden; }
+.hero-right img { width:100%; height:100%; object-fit:cover; object-position:center top; }
+.hero-scroll { position:absolute; bottom:2rem; left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:0.5rem; color:var(--mist); font-size:0.68rem; letter-spacing:0.15em; text-transform:uppercase; z-index:10; }
+.scroll-line { width:1px; height:2.5rem; animation:scrollPulse 2s ease-in-out infinite; }
+.biz .scroll-line { background:linear-gradient(to bottom,var(--clay),transparent); }
+.priv .scroll-line { background:linear-gradient(to bottom,var(--rose),transparent); }
+
+/* BUTTONS */
+.btn-primary { padding:0.9rem 2rem; font-family:'DM Sans',sans-serif; font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; border:none; cursor:pointer; transition:background 0.25s,transform 0.2s; display:inline-block; border-radius:2px; color:white; }
+.biz .btn-primary { background:var(--moss); } .biz .btn-primary:hover { background:var(--charcoal); transform:translateY(-1px); }
+.priv .btn-primary { background:var(--rose); } .priv .btn-primary:hover { background:var(--charcoal); transform:translateY(-1px); }
+.btn-ghost { font-size:0.85rem; color:var(--mist); text-decoration:none; letter-spacing:0.05em; border-bottom:1px solid var(--sand-dark); padding-bottom:2px; transition:color 0.2s,border-color 0.2s; }
+.biz .btn-ghost:hover { color:var(--clay); border-color:var(--clay); }
+.priv .btn-ghost:hover { color:var(--rose); border-color:var(--rose); }
+.btn-white { background:white; padding:0.95rem 2.5rem; font-family:'DM Sans',sans-serif; font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; border-radius:2px; display:inline-block; transition:all 0.25s; border:none; cursor:pointer; }
+.biz .btn-white { color:var(--clay-deep); } .biz .btn-white:hover { background:var(--charcoal); color:white; transform:translateY(-2px); }
+.priv .btn-white { color:var(--charcoal); } .priv .btn-white:hover { background:var(--rose); color:white; transform:translateY(-2px); }
+.btn-service { display:inline-block; padding:0.7rem 1.5rem; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; border-radius:2px; align-self:flex-start; transition:all 0.25s; background:transparent; cursor:pointer; font-family:'DM Sans',sans-serif; }
+.biz .btn-service { border:1px solid var(--moss); color:var(--moss); } .biz .btn-service:hover { background:var(--moss); color:white; }
+.priv .btn-service { border:1px solid var(--rose); color:var(--rose); } .priv .btn-service:hover { background:var(--rose); color:white; }
+.biz .service-card.featured .btn-service, .priv .service-card.featured .btn-service { border-color:white; color:white; }
+.biz .service-card.featured .btn-service:hover { background:white; color:var(--charcoal); }
+.priv .service-card.featured .btn-service:hover { background:white; color:var(--dusk); }
+
+/* SECTION COMMONS */
+.section-label { font-size:0.72rem; letter-spacing:0.25em; text-transform:uppercase; margin-bottom:1.2rem; display:block; }
+.biz .section-label { color:var(--clay); } .priv .section-label { color:var(--rose); }
+.section-header { text-align:center; margin-bottom:5rem; }
+.section-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,4vw,3.2rem); font-weight:300; line-height:1.25; color:var(--charcoal); max-width:24ch; margin:0 auto; }
+.biz .section-title em { font-style:italic; color:var(--moss); }
+.priv .section-title em { font-style:italic; color:var(--dusk); }
+
+/* PAIN SECTION */
+.pain-section { padding:7rem 6rem; background:var(--sand); position:relative; overflow:hidden; }
+.pain-section::before { content:''; position:absolute; top:-4rem; left:0; right:0; height:8rem; background:var(--warm-white); clip-path:ellipse(55% 100% at 50% 0%); }
+.pain-grid { display:grid; gap:1.5rem; max-width:1000px; margin:5rem auto 0; }
+.biz .pain-grid { grid-template-columns:1fr 1fr; }
+.priv .pain-grid { grid-template-columns:repeat(3,1fr); }
+.pain-card { background:var(--warm-white); border:1px solid rgba(196,152,122,0.2); padding:2.2rem; border-radius:4px; position:relative; overflow:hidden; transition:transform 0.3s,box-shadow 0.3s; }
+.pain-card::after { content:''; position:absolute; left:0; top:0; bottom:0; width:3px; transform:scaleY(0); transform-origin:bottom; transition:transform 0.3s; }
+.biz .pain-card::after { background:var(--clay); } .priv .pain-card::after { background:var(--rose); }
+.pain-card:hover { transform:translateY(-3px); box-shadow:0 12px 40px rgba(44,40,36,0.08); }
+.pain-card:hover::after { transform:scaleY(1); }
+.pain-card-icon { font-family:'Cormorant Garamond',serif; font-size:2rem; font-style:italic; color:rgba(192,139,122,0.35); margin-bottom:0.8rem; }
+.pain-card h4 { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:400; color:var(--charcoal); margin-bottom:0.6rem; }
+.pain-card p { font-size:0.88rem; line-height:1.75; color:var(--mist); font-weight:300; }
+.pain-card p strong { font-weight:500; color:var(--charcoal); }
+.pain-conclusion { text-align:center; max-width:55ch; margin:3rem auto 0; }
+.pain-conclusion p { font-size:1rem; line-height:1.8; color:var(--mist); font-weight:300; }
+.pain-conclusion strong { font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-weight:400; color:var(--charcoal); display:block; margin-top:0.8rem; }
+.resonanz-inner { max-width:700px; margin:0 auto; text-align:center; }
+.resonanz-inner p { font-family:'Cormorant Garamond',serif; font-size:clamp(1.3rem,2.5vw,1.75rem); font-weight:300; line-height:1.6; color:var(--charcoal-soft); margin-bottom:1.2rem; }
+.priv .resonanz-inner p em { font-style:italic; color:var(--dusk); }
+.resonanz-divider { width:3rem; height:1px; margin:2rem auto; }
+.biz .resonanz-divider { background:var(--clay); } .priv .resonanz-divider { background:var(--rose); }
+.resonanz-inner .sub { font-family:'DM Sans',sans-serif; font-size:0.95rem; font-weight:300; color:var(--mist); line-height:1.8; }
+
+/* DARK SECTION */
+.dark-section { padding:7rem 6rem; background:var(--charcoal); color:var(--warm-white); }
+.dark-section .section-label { color:var(--clay); }
+.priv .dark-section .section-label { color:var(--rose); }
+.dark-section .section-title { color:var(--warm-white); }
+.usp-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; max-width:1000px; margin:5rem auto 0; }
+.topics-grid { display:grid; grid-template-columns:1fr 1fr; gap:2rem; max-width:1000px; margin:5rem auto 0; }
+.dark-card { padding:2.5rem 2rem; border:1px solid rgba(255,255,255,0.07); background:rgba(255,255,255,0.03); border-radius:4px; transition:background 0.3s,border-color 0.3s; }
+.dark-card:hover { background:rgba(255,255,255,0.07); border-color:rgba(196,152,122,0.3); }
+.dark-num { font-family:'Cormorant Garamond',serif; font-size:3.5rem; font-weight:300; color:rgba(196,152,122,0.18); line-height:1; margin-bottom:1rem; }
+.dark-card h3 { font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:400; color:var(--warm-white); margin-bottom:0.8rem; }
+.dark-card p { font-size:0.88rem; line-height:1.75; color:rgba(250,248,244,0.5); font-weight:300; }
+.topic-tags { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:1.2rem; }
+.topic-tag { font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--rose); border:1px solid rgba(192,139,122,0.3); padding:0.25rem 0.7rem; border-radius:20px; }
+
+/* ABOUT */
+.about-section { padding:7rem 6rem; display:grid; grid-template-columns:5fr 7fr; gap:6rem; align-items:center; max-width:1200px; margin:0 auto; }
+.about-section.reversed { grid-template-columns:7fr 5fr; }
+.about-visual { position:relative; }
+.about-portrait { width:100%; aspect-ratio:4/5; border-radius:6px; overflow:hidden; border:1px solid rgba(196,152,122,0.2); }
+.about-portrait img { width:100%; height:100%; object-fit:cover; object-position:center top; }
+.about-badge { position:absolute; width:7rem; height:7rem; border-radius:50%; display:flex; align-items:center; justify-content:center; text-align:center; color:white; font-size:0.65rem; letter-spacing:0.08em; text-transform:uppercase; line-height:1.4; }
+.biz .about-badge { background:var(--moss); bottom:-1.5rem; right:-1.5rem; }
+.priv .about-badge { background:var(--dusk); bottom:-1.5rem; left:-1.5rem; }
+.about-content h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,3.5vw,2.8rem); font-weight:300; line-height:1.25; margin-bottom:1.8rem; }
+.biz .about-content h2 em { font-style:italic; color:var(--moss); }
+.priv .about-content h2 em { font-style:italic; color:var(--dusk); }
+.about-content p { font-size:0.95rem; line-height:1.85; color:var(--charcoal-soft); font-weight:300; margin-bottom:1.2rem; }
+.about-quote { margin:2rem 0; padding:1.5rem 2rem; background:var(--sand); border-radius:0 4px 4px 0; }
+.biz .about-quote { border-left:3px solid var(--clay); } .priv .about-quote { border-left:3px solid var(--rose); }
+.about-quote p { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:300; font-style:italic; color:var(--charcoal); line-height:1.6; margin:0; }
+
+/* SERVICES */
+.services-section { padding:7rem 6rem; background:var(--sand); }
+.services-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; max-width:1050px; margin:5rem auto 0; }
+.service-card { background:var(--warm-white); border:1px solid rgba(196,152,122,0.2); padding:2.5rem; border-radius:4px; display:flex; flex-direction:column; transition:transform 0.3s,box-shadow 0.3s; }
+.service-card:hover { transform:translateY(-4px); box-shadow:0 20px 50px rgba(44,40,36,0.09); }
+.service-card.featured { border-color:transparent; color:white; }
+.biz .service-card.featured { background:var(--charcoal); }
+.priv .service-card.featured { background:var(--dusk); }
+.service-icon { font-size:1.3rem; margin-bottom:1.2rem; }
+.biz .service-icon { color:var(--clay); } .priv .service-icon { color:var(--rose); }
+.service-card.featured .service-icon { color:rgba(255,255,255,0.4); }
+.service-tag { font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:0.8rem; }
+.biz .service-tag { color:var(--clay); } .priv .service-tag { color:var(--rose); }
+.service-card.featured .service-tag { color:rgba(255,255,255,0.5); }
+.service-card h3 { font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-weight:400; margin-bottom:0.8rem; color:var(--charcoal); }
+.service-card.featured h3 { color:white; }
+.service-card p { font-size:0.88rem; line-height:1.75; color:var(--mist); font-weight:300; flex:1; margin-bottom:1.5rem; }
+.service-card.featured p { color:rgba(255,255,255,0.55); }
+.service-list { list-style:none; margin-bottom:2rem; }
+.service-list li { font-size:0.84rem; color:var(--charcoal-soft); padding:0.4rem 0 0.4rem 1.2rem; position:relative; font-weight:300; border-bottom:1px solid var(--sand); }
+.service-card.featured .service-list li { color:rgba(255,255,255,0.6); border-color:rgba(255,255,255,0.07); }
+.service-list li::before { content:'—'; position:absolute; left:0; font-size:0.7rem; top:0.55rem; }
+.biz .service-list li::before { color:var(--clay); } .priv .service-list li::before { color:var(--rose); }
+
+/* PROCESS */
+.process-section { padding:7rem 6rem; max-width:1100px; margin:0 auto; }
+.process-steps { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--sand-dark); margin-top:5rem; border:1px solid var(--sand-dark); }
+.process-step { background:var(--warm-white); padding:2.5rem 1.8rem; transition:background 0.3s; }
+.process-step:hover { background:var(--sand); }
+.step-num { font-family:'Cormorant Garamond',serif; font-size:4rem; font-weight:300; color:var(--sand-dark); line-height:1; margin-bottom:1rem; }
+.process-step h4 { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:400; margin-bottom:0.6rem; color:var(--charcoal); }
+.process-step p { font-size:0.85rem; line-height:1.7; color:var(--mist); font-weight:300; }
+
+/* TESTIMONIAL */
+.testimonial-section { padding:6rem; text-align:center; color:white; position:relative; overflow:hidden; }
+.biz .testimonial-section { background:var(--moss); }
+.priv .testimonial-section { background:linear-gradient(135deg,var(--rose) 0%,var(--dusk) 100%); }
+.testimonial-section::before { content:'\201C'; font-family:'Cormorant Garamond',serif; font-size:20rem; font-weight:300; color:rgba(255,255,255,0.05); position:absolute; top:-3rem; left:3rem; line-height:1; pointer-events:none; }
+.testimonial-quote { font-family:'Cormorant Garamond',serif; font-size:clamp(1.4rem,3vw,2.1rem); font-weight:300; font-style:italic; line-height:1.55; max-width:65ch; margin:0 auto 2rem; position:relative; }
+.testimonial-author { font-size:0.78rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.5); }
+
+/* FAQ */
+.faq-section { padding:7rem 6rem; max-width:800px; margin:0 auto; }
+.faq-item { border-bottom:1px solid var(--sand-dark); padding:1.5rem 0; }
+.faq-q { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:400; color:var(--charcoal); cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:1rem; user-select:none; }
+.biz .faq-q:hover { color:var(--clay); } .priv .faq-q:hover { color:var(--rose); }
+.faq-toggle { width:1.5rem; height:1.5rem; flex-shrink:0; border:1px solid currentColor; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1rem; font-family:'DM Sans',sans-serif; transition:transform 0.3s,background 0.3s; }
+.biz .faq-item.open .faq-toggle { background:var(--clay); border-color:var(--clay); color:white; transform:rotate(45deg); }
+.priv .faq-item.open .faq-toggle { background:var(--rose); border-color:var(--rose); color:white; transform:rotate(45deg); }
+.faq-a { display:none; padding-top:1rem; font-size:0.9rem; line-height:1.8; color:var(--mist); font-weight:300; }
+.faq-item.open .faq-a { display:block; }
+
+/* CTA STRIP */
+.cta-strip { padding:5rem 6rem; text-align:center; color:white; }
+.biz .cta-strip { background:var(--clay); } .priv .cta-strip { background:var(--charcoal); }
+.cta-strip h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,4vw,3rem); font-weight:300; line-height:1.3; margin-bottom:0.8rem; }
+.cta-strip p { font-size:0.95rem; color:rgba(255,255,255,0.6); margin-bottom:2.5rem; font-weight:300; }
+
+/* CONTACT */
+.contact-section { padding:7rem 6rem; display:grid; grid-template-columns:1fr 1fr; gap:6rem; max-width:1100px; margin:0 auto; }
+.contact-info h2 { font-family:'Cormorant Garamond',serif; font-size:2.4rem; font-weight:300; line-height:1.3; margin-bottom:1.5rem; }
+.biz .contact-info h2 em { font-style:italic; color:var(--moss); }
+.priv .contact-info h2 em { font-style:italic; color:var(--dusk); }
+.contact-info p { font-size:0.95rem; line-height:1.85; color:var(--mist); font-weight:300; margin-bottom:2rem; }
+.contact-detail { display:flex; align-items:center; gap:1rem; padding:0.8rem 0; border-bottom:1px solid var(--sand-dark); font-size:0.9rem; color:var(--charcoal-soft); }
+.contact-detail-label { font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; min-width:4rem; }
+.biz .contact-detail-label { color:var(--clay); } .priv .contact-detail-label { color:var(--rose); }
+.form-group { margin-bottom:1.5rem; }
+.form-label { display:block; font-size:0.72rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--mist); margin-bottom:0.6rem; }
+.form-control { width:100%; padding:0.9rem 1rem; border:1px solid var(--sand-dark); border-radius:2px; background:var(--warm-white); font-family:'DM Sans',sans-serif; font-size:0.95rem; color:var(--charcoal); transition:border-color 0.2s; font-weight:300; outline:none; }
+.biz .form-control:focus { border-color:var(--clay); background:white; }
+.priv .form-control:focus { border-color:var(--rose); background:white; }
+textarea.form-control { resize:vertical; min-height:120px; }
+
+/* BLOG TEASER */
+.blog-teaser-section { padding:7rem 6rem; background:var(--sand); }
+.blog-teaser-inner { max-width:1050px; margin:0 auto; }
+.blog-section-label { font-size:0.72rem; letter-spacing:0.25em; text-transform:uppercase; color:var(--clay); margin-bottom:1.2rem; display:block; }
+.blog-section-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,4vw,3.2rem); font-weight:300; line-height:1.25; color:var(--charcoal); }
+.blog-section-title em { font-style:italic; color:var(--clay); }
+.blog-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; margin-top:4rem; }
+.blog-card { background:var(--warm-white); border:1px solid rgba(196,152,122,0.2); padding:2.2rem; border-radius:4px; display:flex; flex-direction:column; gap:0.8rem; transition:transform 0.3s,box-shadow 0.3s; }
+.blog-card:hover { transform:translateY(-3px); box-shadow:0 12px 40px rgba(44,40,36,0.08); }
+.blog-date { font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--clay); }
+.blog-card-title { font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-weight:400; color:var(--charcoal); line-height:1.35; }
+.blog-card-excerpt { font-size:0.88rem; line-height:1.75; color:var(--mist); font-weight:300; flex:1; }
+.blog-read-more { font-size:0.82rem; color:var(--clay); text-decoration:none; letter-spacing:0.05em; border-bottom:1px solid rgba(196,152,122,0.4); padding-bottom:2px; align-self:flex-start; transition:color 0.2s,border-color 0.2s; }
+.blog-read-more:hover { color:var(--charcoal); border-color:var(--charcoal); }
+.blog-teaser-footer { text-align:center; margin-top:3rem; }
+.blog-all-link { font-size:0.88rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--charcoal); text-decoration:none; border-bottom:1px solid var(--sand-dark); padding-bottom:3px; transition:color 0.2s,border-color 0.2s; }
+.blog-all-link:hover { color:var(--clay); border-color:var(--clay); }
+@media(max-width:900px) {
+  .blog-teaser-section { padding:5rem 2rem; }
+  .blog-grid { grid-template-columns:1fr; }
+}
+
+/* SERVICES DARK (Privatperson "Der Rahmen für Veränderung") */
+.services-section.dark-variant { background:var(--charcoal); }
+.services-section.dark-variant .section-label { color:var(--rose); }
+.services-section.dark-variant .section-title { color:var(--warm-white); }
+.services-section.dark-variant .section-title em { color:var(--dusk); }
+.services-section.dark-variant .service-card { background:rgba(255,255,255,0.04); border-color:rgba(255,255,255,0.08); color:var(--warm-white); }
+.services-section.dark-variant .service-card h3 { color:var(--warm-white); }
+.services-section.dark-variant .service-card p { color:rgba(250,248,244,0.5); }
+.services-section.dark-variant .service-tag { color:var(--rose); }
+.services-section.dark-variant .service-list li { color:rgba(250,248,244,0.6); border-color:rgba(255,255,255,0.07); }
+.services-section.dark-variant .service-list li::before { color:var(--rose); }
+.services-section.dark-variant .service-card:hover { background:rgba(255,255,255,0.08); border-color:rgba(192,139,122,0.3); }
+.services-section.dark-variant .service-card.featured { background:var(--dusk); border-color:transparent; }
+.services-section.dark-variant .service-icon { color:var(--rose); }
+.services-section.dark-variant .service-card.featured .service-icon { color:rgba(255,255,255,0.4); }
+
+/* FOOTER */
+footer { background:var(--charcoal); color:rgba(250,248,244,0.45); padding:3rem 6rem; display:flex; align-items:center; justify-content:space-between; font-size:0.8rem; letter-spacing:0.05em; }
+footer a { color:rgba(250,248,244,0.35); text-decoration:none; transition:color 0.2s; }
+footer a:hover { color:var(--clay); }
+.footer-logo { font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:400; color:var(--warm-white); letter-spacing:0.05em; }
+.footer-logo span { color:var(--clay); }
+.footer-links { display:flex; gap:2rem; }
+
+/* ANIMATIONS */
+@keyframes fadeUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
+@keyframes scrollPulse { 0%,100% { opacity:0.4; } 50% { opacity:1; } }
+/* rotateBadge removed — badge is now static */
+.fade-in { opacity:0; transform:translateY(24px); transition:opacity 0.7s ease,transform 0.7s ease; }
+.fade-in.visible { opacity:1; transform:translateY(0); }
+
+/* RESPONSIVE */
+@media(max-width:900px) {
+  .aud-label { display:none; }
+  nav { padding:1.2rem 2rem; }
+  .nav-links { display:none; }
+  .hero { grid-template-columns:1fr; }
+  .hero-right { display:none; }
+  .hero-left { padding:5rem 2rem 4rem; }
+  .pain-section, .dark-section, .services-section, .process-section,
+  .faq-section, .cta-strip, .contact-section, .testimonial-section { padding:5rem 2rem; }
+  .about-section, .about-section.reversed { grid-template-columns:1fr; padding:5rem 2rem; gap:3rem; }
+  .biz .pain-grid, .priv .pain-grid { grid-template-columns:1fr; }
+  .usp-grid, .topics-grid, .services-grid { grid-template-columns:1fr; }
+  .process-steps { grid-template-columns:1fr 1fr; }
+  .contact-section { grid-template-columns:1fr; gap:3rem; }
+  footer { flex-direction:column; gap:1.5rem; text-align:center; padding:2.5rem 2rem; }
+}
+
+/* morphBlob animation removed — portrait placeholders are static */
+</style>
+</head>
+<body>
+
+<!-- AUDIENCE BAR -->
+<div class="audience-bar">
+  <span class="aud-label">Ich suche Coaching als</span>
+  <div class="toggle-wrap">
+    <button id="btn-biz" class="toggle-btn active" onclick="switchTo('biz')">Unternehmer:in</button>
+    <div class="toggle-divider"></div>
+    <button id="btn-priv" class="toggle-btn" onclick="switchTo('priv')">Privatperson</button>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Maria Sicheneder<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#ueber-mich">Über mich</a></li>
+    <li><a href="#angebote">Angebote</a></li>
+    <li><a href="#prozess">Vorgehen</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="#" onclick="openCalendly(event)" class="nav-cta">Erstgespräch</a></li>
+  </ul>
+</nav>
+
+<div id="panel-biz" class="panel biz active">
+
+<section class="hero">
+  <div class="hero-bg biz"></div>
+  <div class="hero-left">
+    <div class="hero-eyebrow">Systemisches Coaching · Traumasensible Integration</div>
+    <h1>Du tust alles richtig. Und weisst trotzdem, dass da noch <em>mehr</em> ist.</h1>
+    <p class="hero-sub">Für Selbständige und Unternehmer, die nicht mehr kämpfen wollen — sondern endlich ankommen.</p>
+    <div class="hero-cta-group">
+      <a href="#" onclick="openCalendly(event)" class="btn-primary">Kostenloses Erstgespräch →</a>
+      <a href="#ueber-mich" class="btn-ghost">Mehr erfahren</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div style="width:68%;height:70%;
+  border-radius:60% 40% 50% 50%/60% 50% 50% 40%;
+  background:linear-gradient(135deg,rgba(196,152,122,0.2),rgba(74,92,71,0.12));
+  border:1px solid rgba(196,152,122,0.25);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;font-size:1rem;
+  color:#8c8078;font-style:italic;text-align:center;padding:2rem;">Dein Portrait<br>kommt hier hin</div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div>Scroll</div>
+</section>
+
+<section class="pain-section">
+  <div class="section-header fade-in">
+    <span class="section-label">Du kennst dieses Gefühl</span>
+    <h2 class="section-title">Das ist kein Strategie-Problem. Das ist ein <em>Muster-Problem.</em></h2>
+  </div>
+  <div class="pain-grid">
+    <div class="pain-card fade-in"><p>Du arbeitest viel — aber <strong>Erfolg fühlt sich selten wirklich gut an.</strong></p></div>
+    <div class="pain-card fade-in"><p>Du weisst, was zu tun wäre — und <strong>tust es trotzdem nicht.</strong></p></div>
+    <div class="pain-card fade-in"><p>Du führst nach aussen souverän — und <strong>trägst innen mehr, als andere sehen.</strong></p></div>
+    <div class="pain-card fade-in"><p>Du hast schon vieles versucht — Bücher, Kurse, Strategien — aber <strong>das Muster bleibt.</strong></p></div>
+  </div>
+  <div class="pain-conclusion fade-in">
+    <p>Das sind keine Fehler. Das sind Hinweise. Auf etwas Tieferes — das wartet, erkannt zu werden.</p>
+    <strong>Genau dafür bin ich da.</strong>
+  </div>
+</section>
+
+<section class="dark-section">
+  <div class="section-header fade-in">
+    <span class="section-label">Was mich auszeichnet</span>
+    <h2 class="section-title">Ich arbeite nicht an <em>Symptomen.</em></h2>
+  </div>
+  <div class="usp-grid">
+    <div class="dark-card fade-in"><div class="dark-num">01</div><h3>Ich spreche deine Sprache.</h3><p>Ich bin selbst Unternehmer. Ich kenne den Druck, die Freiheit, die Einsamkeit und die Kraft dieses Weges — aus eigener Erfahrung, nicht aus dem Lehrbuch.</p></div>
+    <div class="dark-card fade-in"><div class="dark-num">02</div><h3>Ich gehe tiefer.</h3><p>Systemisches Coaching trifft auf traumasensible Integration. Nicht nur, was du denkst — sondern was dein Nervensystem, dein Körper und deine Geschichte dir sagen.</p></div>
+    <div class="dark-card fade-in"><div class="dark-num">03</div><h3>Echte Veränderung.</h3><p>Kein neues Wissen. Ein veränderter Blick — auf dich, dein Business, auf das, was wirklich möglich ist. Das ist der Unterschied, den meine Klienten erleben.</p></div>
+  </div>
+</section>
+
+<section class="about-section" id="ueber-mich">
+  <div class="about-visual fade-in">
+    <div class="about-portrait">Dein Portrait<br>hier einfügen</div>
+    <div class="about-badge">Systemische Coach &amp; Beraterin</div>
+  </div>
+  <div class="about-content fade-in">
+    <span class="section-label">Über mich</span>
+    <h2>Maria Sicheneder — Systemische Coach & Expertin für <em>traumasensible Integration</em></h2>
+    <p><em>Es gibt Menschen, die coachen, weil sie eine Ausbildung gemacht haben. Und es gibt Menschen, die coachen, weil sie einen Weg gegangen sind, der sie dazu gemacht hat. Ich gehöre zur zweiten Gruppe.</em></p>
+    <p>Transformation ist nicht mein Angebot. Sie ist mein Weg.</p>
+    <p>Ich kenne den Moment, in dem das alte Muster wieder auftaucht — obwohl man es längst verstanden hat. Die Stille, wenn man nach aussen funktioniert und innen sucht. Den Punkt, an dem mehr Wissen nicht mehr hilft, weil das, was bremst, tiefer sitzt.</p>
+    <div class="about-quote"><p>Ich bringe keine vorgefertigten Antworten in eine Sitzung. Ich bringe echte Aufmerksamkeit — für das, was wirklich da ist. Und die Verlässlichkeit, dass dieser Raum sicher ist. Immer.</p></div>
+    <div style="margin-top:1.8rem;padding-top:1.8rem;border-top:1px solid var(--sand-dark);">
+      <span style="font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--clay);display:block;margin-bottom:1rem;">Ausbildung & Qualifikation</span>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:0.6rem;">
+        <li style="font-size:0.88rem;color:var(--charcoal-soft);padding-left:1.2rem;position:relative;font-weight:300;">
+          <span style="position:absolute;left:0;color:var(--clay);">—</span>Systemische Coach-Ausbildung (zertifiziert)
+        </li>
+        <li style="font-size:0.88rem;color:var(--charcoal-soft);padding-left:1.2rem;position:relative;font-weight:300;">
+          <span style="position:absolute;left:0;color:var(--clay);">—</span>Traumasensibles Coaching — Neurosystemische Integration (in Ausbildung)
+        </li>
+        <li style="font-size:0.88rem;color:var(--charcoal-soft);padding-left:1.2rem;position:relative;font-weight:300;">
+          <span style="position:absolute;left:0;color:var(--clay);">—</span>Psychologiestudium (in Ausbildung, Fernuniversität Hagen)
+        </li>
+      </ul>
+    </div>
+    <a href="#" onclick="openCalendly(event)" class="btn-primary" style="margin-top:1.8rem">Erstgespräch vereinbaren →</a>
+  </div>
+</section>
+
+<section class="services-section" id="angebote">
+  <div class="section-header fade-in">
+    <span class="section-label">Meine Angebote</span>
+    <h2 class="section-title">Was wäre möglich, wenn das, was dich bremst, <em>endlich aufhört?</em></h2>
+  </div>
+  <div class="services-grid">
+    <div class="service-card fade-in">
+      <div class="service-icon">○</div><div class="service-tag">Flexibel &amp; individuell</div>
+      <h3>Einzelcoaching</h3>
+      <p>Die Arbeit, für die es keinen Kurs gibt. Systemisch, traumasensibel, ehrlich — ohne Standardlösungen.</p>
+      <ul class="service-list"><li>Du weisst, was du willst — aber etwas hält zurück</li><li>Immer dieselben Muster im Business</li><li>Du funktionierst — aber der Preis wird höher</li><li>Du willst wachsen — ohne dich selbst zu verlieren</li></ul>
+      <a href="#kontakt" class="btn-service">Anfragen →</a>
+    </div>
+    <div class="service-card featured fade-in">
+      <div class="service-icon">◈</div><div class="service-tag">Empfohlen · Tief &amp; intensiv</div>
+      <h3>Intensiv-Begleitung</h3>
+      <p>Für die, die bereit sind, tiefer und schneller zu gehen. An Wendepunkten, in Wachstumsphasen oder vor grossen Entscheidungen.</p>
+      <ul class="service-list"><li>Wöchentliche Sitzungen</li><li>Konzentrierter 3-Monats-Prozess</li><li>Individuell angepasst — kein festes Programm</li><li>Tiefgang statt Schnelllösung</li><li>Für echten, nachhaltigen Wandel</li></ul>
+      <a href="#" onclick="openCalendly(event)" class="btn-service">Anfragen →</a>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-icon">◇</div><div class="service-tag">Kostenlos · Kein Druck</div>
+      <h3>Erstgespräch</h3>
+      <p>30 Minuten. Du erzählst mir, wo du stehst. Ich höre zu. Kein Verkaufsgespräch — nur Klarheit.</p>
+      <ul class="service-list"><li>Online oder telefonisch</li><li>Keine versteckte Agenda</li><li>Du entscheidest danach frei</li><li>Ehrliche Einschätzung von mir</li></ul>
+      <a href="#" onclick="openCalendly(event)" class="btn-service">Jetzt buchen →</a>
+    </div>
+  </div>
+</section>
+
+<section class="process-section" id="prozess">
+  <div class="section-header fade-in">
+    <span class="section-label">Mein Vorgehen</span>
+    <h2 class="section-title">Wie Veränderung <em>wirklich</em> entsteht</h2>
+  </div>
+  <div class="process-steps">
+    <div class="process-step fade-in"><div class="step-num">01</div><h4>Verstehen</h4><p>Wir schauen gemeinsam, was wirklich da ist — unter der Oberfläche, jenseits der offensichtlichen Themen.</p></div>
+    <div class="process-step fade-in"><div class="step-num">02</div><h4>Erkennen</h4><p>Muster sichtbar machen. Nicht urteilen — verstehen, woher sie kommen und welche Funktion sie hatten.</p></div>
+    <div class="process-step fade-in"><div class="step-num">03</div><h4>Integrieren</h4><p>Traumasensibel und systemisch: Wir arbeiten mit dem ganzen Menschen — Körper, Nervensystem, Geschichte.</p></div>
+    <div class="process-step fade-in"><div class="step-num">04</div><h4>Gestalten</h4><p>Nicht mehr gegen dich. Sondern mit dir. Aus einem neuen Blick heraus — auf dich und was möglich ist.</p></div>
+  </div>
+</section>
+
+<section class="testimonial-section">
+  <blockquote class="testimonial-quote fade-in">„Ich habe aufgehört, nach der richtigen Strategie zu suchen. Und angefangen zu verstehen, warum ich die Strategien, die ich hatte, nie wirklich umgesetzt habe. Das hat sich verändert."</blockquote>
+  <p class="testimonial-author fade-in">[Name], Unternehmerin</p>
+</section>
+
+<section class="faq-section" id="faq">
+  <div class="section-header fade-in">
+    <span class="section-label">Häufige Fragen</span>
+    <h2 class="section-title">Was du vielleicht wissen <em>möchtest</em></h2>
+  </div>
+  <div style="margin-top:3rem">
+    <div class="faq-item fade-in"><div class="faq-q">Ist das Coaching oder Therapie? <span class="faq-toggle">+</span></div><div class="faq-a">Coaching. Das bedeutet: Wir arbeiten ressourcenorientiert mit deiner Gegenwart und Zukunft — nicht therapeutisch mit der Vergangenheit. Traumasensibel bedeutet, dass ich weiss, wie ich respektvoll mit deiner Geschichte umgehe — ohne die Grenze zur Therapie zu überschreiten.</div></div>
+    <div class="faq-item fade-in"><div class="faq-q">Wie läuft das Erstgespräch ab? <span class="faq-toggle">+</span></div><div class="faq-a">30 Minuten, online oder telefonisch, kostenlos. Du erzählst, ich höre zu. Keine Agenda, kein Pitch. Am Ende wissen wir beide, ob und wie ich helfen kann.</div></div>
+    <div class="faq-item fade-in"><div class="faq-q">Wie lange dauert ein Prozess? <span class="faq-toggle">+</span></div><div class="faq-a">Das hängt von dir und deinem Anliegen ab. Manche Themen klären sich in wenigen Sitzungen. Tiefere Muster brauchen Zeit. Das sprechen wir im Erstgespräch ehrlich an.</div></div>
+    <div class="faq-item fade-in"><div class="faq-q">Ich habe schon viele Coachings gemacht. Was ist hier anders? <span class="faq-toggle">+</span></div><div class="faq-a">Der Unterschied liegt nicht in der Methode — sondern darin, wo wir ansetzen. Wir arbeiten nicht an Strategien. Wir arbeiten an dem, was Strategien blockiert.</div></div>
+    <div class="faq-item fade-in"><div class="faq-q">Ist das Coaching vertraulich? <span class="faq-toggle">+</span></div><div class="faq-a">Vollständig. Was zwischen uns besprochen wird, bleibt zwischen uns. Immer — ohne Ausnahme.</div></div>
+  </div>
+</section>
+
+<section class="cta-strip">
+  <h2>Das Gespräch, das alles verändern kann,<br>dauert 30 Minuten.</h2>
+  <p>Kostenlos, unverbindlich, ehrlich.</p>
+  <button onclick="openCalendly(event)" class="btn-white">Erstgespräch vereinbaren →</button>
+</section>
+
+<section class="contact-section" id="kontakt">
+  <div class="contact-info fade-in">
+    <span class="section-label">Kontakt</span>
+    <h2>Der erste Schritt ist einfacher als du <em>denkst.</em></h2>
+    <p>Schreib mir. Es braucht keine perfekte Formulierung. Ich antworte persönlich — in der Regel innerhalb von 24 Stunden.</p>
+    <div>
+      <div class="contact-detail"><span class="contact-detail-label">Email</span><a href="mailto:info@maria-siecheneder.com">info@maria-siecheneder.com</a></div>
+      <div class="contact-detail"><span class="contact-detail-label">Telefon</span>[optional]</div>
+      <div class="contact-detail"><span class="contact-detail-label">Ort</span>München · Online</div>
+    </div>
+  </div>
+  <div class="fade-in">
+    <div class="form-group"><label class="form-label">Dein Name</label><input type="text" class="form-control" placeholder="Wie soll ich dich ansprechen?"></div>
+    <div class="form-group"><label class="form-label">E-Mail</label><input type="email" class="form-control" placeholder="deine@email.de"></div>
+    <div class="form-group"><label class="form-label">Was bewegt dich gerade?</label><textarea class="form-control" placeholder="Erzähl mir, was dich herführt — keine perfekte Formulierung nötig."></textarea></div>
+    <button class="btn-primary" onclick="sendContactForm(this,'biz')" style="width:100%;text-align:center;border:none;padding:1rem;">Nachricht senden →</button>
+  </div>
+</section>
+
+</div><!-- /panel-biz -->
+
+
+<!-- ═══════════════════ PRIVATE PANEL ═══════════════════ -->
+<div id="panel-priv" class="panel priv">
+
+<section class="hero">
+  <div class="hero-bg priv"></div>
+  <div class="hero-left">
+    <div class="hero-eyebrow">Coaching für Privatpersonen · Systemisch & traumasensibel</div>
+    <h1>Du hast dich lange genug <em>erklärt.</em> Jetzt darfst du einfach ankommen.</h1>
+    <p class="hero-sub">Für Menschen, die spüren, dass da mehr ist — hinter dem Funktionieren, hinter den alten Mustern, hinter dem, was sie sich selbst erzählen.</p>
+    <div class="hero-cta-group">
+      <a href="#" onclick="openCalendly(event)" class="btn-primary">Kostenloses Erstgespräch →</a>
+      <a href="#themen" class="btn-ghost">Was dich bewegt</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div style="width:68%;height:70%;
+  border-radius:50% 50% 40% 60%/55% 45% 55% 45%;
+  background:linear-gradient(145deg,rgba(192,139,122,0.18),rgba(122,110,138,0.12));
+  border:1px solid rgba(192,139,122,0.22);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;font-size:1rem;
+  color:#8c8078;font-style:italic;text-align:center;padding:2rem;">Dein Portrait<br>kommt hier hin</div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div>Scroll</div>
+</section>
+
+<section class="pain-section">
+  <div class="resonanz-inner">
+    <span class="section-label fade-in">Du bist nicht allein damit</span>
+    <p class="fade-in">Du weisst, dass etwas nicht stimmt — aber du kannst es nicht greifen. Du funktionierst, du gibst. Und doch bleibt dieses leise Gefühl: <em>Das bin nicht wirklich ich.</em></p>
+    <div class="resonanz-divider"></div>
+    <p class="sub fade-in">Das sind keine Fehler. Das sind Hinweise. Auf Muster, die einmal Sinn ergaben — und die dich heute einschränken. Genau dort setzen wir an.</p>
+  </div>
+</section>
+
+<section style="padding:5rem 6rem;background:var(--warm-white);" id="themen">
+  <div class="section-header fade-in">
+    <span class="section-label">Was dich vielleicht hierher führt</span>
+    <h2 class="section-title">Erkennst du dich <em>darin?</em></h2>
+  </div>
+  <div class="pain-grid" style="grid-template-columns:repeat(3,1fr);margin-top:4rem;">
+    <div class="pain-card fade-in"><div class="pain-card-icon">"</div><h4>Du weisst, wer du sein willst — aber lebst es nicht.</h4><p>Du siehst die Lücke. Aber die Brücke dorthin — die fehlt noch.</p></div>
+    <div class="pain-card fade-in"><div class="pain-card-icon">"</div><h4>Du wiederholst immer dieselben Muster.</h4><p>In Beziehungen, in Entscheidungen. Du erkennst sie — aber das Erkennen allein verändert nichts.</p></div>
+    <div class="pain-card fade-in"><div class="pain-card-icon">"</div><h4>Dein Selbstwert ist abhängig von aussen.</h4><p>Von Leistung. Von Anerkennung. Innerlich weisst du: Das kann nicht der Weg sein.</p></div>
+    <div class="pain-card fade-in"><div class="pain-card-icon">"</div><h4>Du verlierst dich in der Orientierungslosigkeit.</h4><p>Was willst du wirklich? Wer bist du jenseits deiner Rollen? Die Fragen sind da — die Antworten fühlen sich fremd an.</p></div>
+    <div class="pain-card fade-in"><div class="pain-card-icon">"</div><h4>Du bremst dich selbst — ohne zu wissen warum.</h4><p>Du weisst, was gut wäre. Und tust es trotzdem nicht. Dieser Widerstand hat einen Grund — tiefer als Willenskraft.</p></div>
+    <div class="pain-card fade-in"><div class="pain-card-icon">"</div><h4>Du hast das Gefühl, nicht wirklich du selbst zu sein.</h4><p>Du spielst Rollen, passt dich an. Aber da ist diese Stimme: Wann bin ich endlich einfach ich?</p></div>
+  </div>
+</section>
+
+<section class="dark-section">
+  <div class="section-header fade-in">
+    <span class="section-label">Meine Schwerpunkte</span>
+    <h2 class="section-title">Womit wir <em>arbeiten</em></h2>
+  </div>
+  <div class="topics-grid">
+    <div class="dark-card fade-in"><div class="dark-num">01</div><h3>Selbstwert & innere Sicherheit</h3><p>Selbstwert, der nicht von Leistung oder Bestätigung abhängt. Sondern von einem tiefen Verständnis dessen, wer du wirklich bist.</p><div class="topic-tags"><span class="topic-tag">Innerer Kritiker</span><span class="topic-tag">Glaubenssätze</span><span class="topic-tag">Selbstbild</span></div></div>
+    <div class="dark-card fade-in"><div class="dark-num">02</div><h3>Orientierung & Identität</h3><p>Wer bist du wirklich — jenseits von dem, was von dir erwartet wird? Klarheit über deine Werte, Wünsche und deinen eigenen Weg.</p><div class="topic-tags"><span class="topic-tag">Lebenssinn</span><span class="topic-tag">Werte</span><span class="topic-tag">Neuorientierung</span></div></div>
+    <div class="dark-card fade-in"><div class="dark-num">03</div><h3>Muster & Wiederholungen</h3><p>Muster wiederholen sich nicht aus Schwäche — sie haben einen Ursprung. Wir schauen hin, verstehen und schaffen Raum für echte Veränderung.</p><div class="topic-tags"><span class="topic-tag">Verhaltensweisen</span><span class="topic-tag">Beziehungsmuster</span></div></div>
+    <div class="dark-card fade-in"><div class="dark-num">04</div><h3>Innere Blockaden</h3><p>Was dich bremst, sind Schutzmechanismen, die einmal Sinn ergaben. Traumasensibel lösen wir diese Schicht für Schicht.</p><div class="topic-tags"><span class="topic-tag">Selbstsabotage</span><span class="topic-tag">Angst & Vermeidung</span></div></div>
+  </div>
+</section>
+
+<section class="about-section reversed" id="ueber-mich-priv">
+  <div class="about-content fade-in">
+    <span class="section-label">Mein Ansatz</span>
+    <h2>Nicht schneller denken — sondern <em>tiefer verstehen.</em></h2>
+    <p>Ich arbeite systemisch und traumasensibel. Das bedeutet: Ich schaue nicht nur auf dich, sondern auf das, was dich geformt hat — deine Geschichte, deine Prägungen, dein Nervensystem.</p>
+    <div class="about-quote"><p>Du bist nicht kaputt. Du hast dich angepasst. Und jetzt ist es Zeit, herauszufinden, wer du dahinter wirklich bist.</p></div>
+    <p>Du bekommst bei mir keine Ratschläge, keine Checklisten, keinen Druck. Du bekommst einen Raum — ehrlich, sicher — in dem du wirklich du selbst sein kannst.</p>
+    <a href="#" onclick="openCalendly(event)" class="btn-primary" style="margin-top:1rem">Erstgespräch vereinbaren →</a>
+  </div>
+  <div class="about-visual fade-in">
+    <div class="about-portrait">Dein Portrait<br>hier einfügen</div>
+    <div class="about-badge">Sicher · Ehrlich · Ohne Druck</div>
+  </div>
+</section>
+
+<section class="services-section dark-variant" id="angebote-priv">
+  <div class="section-header fade-in">
+    <span class="section-label">Meine Angebote</span>
+    <h2 class="section-title">Der Rahmen für <em>deine Veränderung</em></h2>
+  </div>
+  <div class="services-grid">
+    <div class="service-card fade-in">
+      <div class="service-icon">○</div><div class="service-tag">Flexibel · Individuell</div>
+      <h3>Einzelsitzung</h3>
+      <p>Für einen ersten Schritt, ein konkretes Thema, oder um zu spüren, ob die Arbeit mit mir passt.</p>
+      <ul class="service-list"><li>60 oder 90 Minuten</li><li>Online oder in Präsenz</li><li>Ohne Verpflichtung</li><li>Klar strukturiert, offen geführt</li></ul>
+      <a href="#kontakt-priv" class="btn-service">Anfragen →</a>
+    </div>
+    <div class="service-card featured fade-in">
+      <div class="service-icon">◈</div><div class="service-tag">Empfohlen · Tief & nachhaltig</div>
+      <h3>Begleitprozess</h3>
+      <p>Für echte, nachhaltige Veränderung. Ein kontinuierlicher Prozess — wöchentlich, mit Unterstützung zwischen den Sitzungen.</p>
+      <ul class="service-list"><li>Wöchentliche Sitzungen</li><li>Konzentrierter 3-Monats-Prozess</li><li>Individuell angepasst — kein festes Programm</li><li>Tiefgang statt Schnelllösung</li></ul>
+      <a href="#" onclick="openCalendly(event)" class="btn-service">Anfragen →</a>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-icon">◇</div><div class="service-tag">Kostenlos · Kein Druck</div>
+      <h3>Erstgespräch</h3>
+      <p>30 Minuten. Du erzählst, ich höre zu. Kein Pitch — nur echtes Kennenlernen.</p>
+      <ul class="service-list"><li>Online oder telefonisch</li><li>Vollständig kostenlos</li><li>Ehrliche Einschätzung</li><li>Du entscheidest danach frei</li></ul>
+      <a href="#" onclick="openCalendly(event)" class="btn-service">Jetzt buchen →</a>
+    </div>
+  </div>
+</section>
+
+<section class="process-section">
+  <div class="section-header fade-in">
+    <span class="section-label">Wie wir arbeiten</span>
+    <h2 class="section-title">Schritt für Schritt — in <em>deinem Tempo</em></h2>
+  </div>
+  <div class="process-steps">
+    <div class="process-step fade-in"><div class="step-num">01</div><h4>Ankommen</h4><p>Kein Druck, kein Tempo. Wir schaffen zuerst einen Raum, in dem du dich wirklich sicher und gesehen fühlst.</p></div>
+    <div class="process-step fade-in"><div class="step-num">02</div><h4>Verstehen</h4><p>Gemeinsam schauen wir hin — auf das, was da ist. Unter der Oberfläche, jenseits der bekannten Erklärungen.</p></div>
+    <div class="process-step fade-in"><div class="step-num">03</div><h4>Lösen</h4><p>Muster, Blockaden, alte Überzeugungen — wir begegnen ihnen traumasensibel, ohne Druck, mit Respekt.</p></div>
+    <div class="process-step fade-in"><div class="step-num">04</div><h4>Werden</h4><p>Nicht mehr gegen dich. Aus einem neuen, freieren Blick heraus — auf dich selbst und das, was dir wirklich möglich ist.</p></div>
+  </div>
+</section>
+
+<section class="testimonial-section">
+  <blockquote class="testimonial-quote fade-in">„Ich dachte, ich kenne meine Muster schon gut genug. Aber erst hier habe ich verstanden, warum ich sie nicht losgeworden bin. Das war ein echter Wendepunkt."</blockquote>
+  <p class="testimonial-author fade-in">[Name], Privatperson</p>
+</section>
+
+<section class="faq-section" id="faq-priv">
+  <div class="section-header fade-in">
+    <span class="section-label">Häufige Fragen</span>
+    <h2 class="section-title">Was du vielleicht wissen <em>möchtest</em></h2>
+  </div>
+  <div style="margin-top:3rem">
+    <div class="faq-item fade-in"><div class="faq-q">Ist das Therapie oder Coaching? <span class="faq-toggle">+</span></div><div class="faq-a">Coaching. Wir arbeiten ressourcenorientiert mit deiner Gegenwart und Zukunft. Traumasensibel bedeutet: Ich weiss, wie ich respektvoll mit deiner Geschichte umgehe — ohne die Grenze zur Therapie zu überschreiten.</div></div>
+    <div class="faq-item fade-in"><div class="faq-q">Ich habe schon Therapie gemacht. Macht Coaching trotzdem Sinn? <span class="faq-toggle">+</span></div><div class="faq-a">Sehr oft ja. Therapie arbeitet oft mit dem Warum — Coaching mit dem Wie und Was jetzt. Viele meiner Klienten kommen nach einer Therapiephase zu mir, um das Verstandene in echte Veränderung zu übersetzen.</div></div>
+    <div class="faq-item fade-in"><div class="faq-q">Wie lange dauert der Prozess? <span class="faq-toggle">+</span></div><div class="faq-a">Das ist individuell. Manche Themen klären sich in wenigen Sitzungen — tiefere Muster brauchen Zeit. Im Erstgespräch spreche ich das ehrlich an, ohne versteckte Erwartungen.</div></div>
+    <div class="faq-item fade-in"><div class="faq-q">Ist alles vertraulich? <span class="faq-toggle">+</span></div><div class="faq-a">Vollständig. Was zwischen uns gesprochen wird, bleibt zwischen uns — ohne Ausnahme.</div></div>
+    <div class="faq-item fade-in"><div class="faq-q">Wie läuft das Erstgespräch ab? <span class="faq-toggle">+</span></div><div class="faq-a">30 Minuten, online oder telefonisch, kostenlos. Du erzählst, ich höre zu. Am Ende weisst du, ob du mit mir arbeiten willst. Kein Druck, keine Agenda.</div></div>
+  </div>
+</section>
+
+<section class="cta-strip">
+  <h2>Ein Gespräch.<br>Ohne Erwartungen. Ohne Druck.</h2>
+  <p>30 Minuten, kostenlos — und du weisst danach mehr als vorher.</p>
+  <button onclick="openCalendly(event)" class="btn-white">Erstgespräch vereinbaren →</button>
+</section>
+
+<section class="contact-section" id="kontakt-priv">
+  <div class="contact-info fade-in">
+    <span class="section-label">Kontakt</span>
+    <h2>Schreib mir —<br>so wie es sich <em>gerade anfühlt.</em></h2>
+    <p>Es braucht keine perfekte Formulierung. Kein klares Anliegen. Schreib einfach. Ich antworte persönlich — in der Regel innerhalb von 24 Stunden.</p>
+    <div>
+      <div class="contact-detail"><span class="contact-detail-label">Email</span><a href="mailto:info@maria-siecheneder.com">info@maria-siecheneder.com</a></div>
+      <div class="contact-detail"><span class="contact-detail-label">Telefon</span>[optional]</div>
+      <div class="contact-detail"><span class="contact-detail-label">Ort</span>München · Online</div>
+    </div>
+  </div>
+  <div class="fade-in">
+    <div class="form-group"><label class="form-label">Dein Name</label><input type="text" class="form-control" placeholder="Wie soll ich dich ansprechen?"></div>
+    <div class="form-group"><label class="form-label">E-Mail</label><input type="email" class="form-control" placeholder="deine@email.de"></div>
+    <div class="form-group"><label class="form-label">Was bewegt dich gerade?</label><textarea class="form-control" placeholder="Schreib so wie es kommt — keine perfekte Formulierung nötig."></textarea></div>
+    <button class="btn-primary" style="width:100%;text-align:center;border:none;padding:1rem;">Nachricht senden →</button>
+  </div>
+</section>
+
+</div><!-- /panel-priv -->
+
+<!-- BLOG TEASER SECTION -->
+<section class="blog-teaser-section">
+  <div class="blog-teaser-inner">
+    <div class="section-header fade-in">
+      <span class="blog-section-label">Gedanken & Impulse</span>
+      <h2 class="blog-section-title">Neueste <em>Beiträge</em></h2>
+    </div>
+    <div class="blog-grid">
+      <article class="blog-card fade-in">
+        <time class="blog-date">15. Februar 2026</time>
+        <h3 class="blog-card-title">Warum Willenskraft das falsche Werkzeug ist</h3>
+        <p class="blog-card-excerpt">Wir glauben, dass wir es einfach mehr wollen müssen. Mehr Disziplin, mehr Konsequenz. Doch was, wenn das Problem gar nicht der Wille ist?</p>
+        <a href="blog-willenskraft.html" class="blog-read-more">Weiterlesen →</a>
+      </article>
+      <article class="blog-card fade-in">
+        <time class="blog-date">28. Januar 2026</time>
+        <h3 class="blog-card-title">Das Muster, das immer wiederkommt</h3>
+        <p class="blog-card-excerpt">Dieselbe Situation, dieselbe Reaktion — obwohl man es längst besser weiß. Was steckt hinter Wiederholungen, die sich trotz Verstand nicht ändern?</p>
+        <a href="blog-muster.html" class="blog-read-more">Weiterlesen →</a>
+      </article>
+      <article class="blog-card fade-in">
+        <time class="blog-date">10. Januar 2026</time>
+        <h3 class="blog-card-title">Funktionieren ist kein Leben</h3>
+        <p class="blog-card-excerpt">Nach außen läuft alles. Innen ist es still geworden. Viele meiner Klientinnen kennen dieses Gefühl — und fragen sich, ob das alles sein kann.</p>
+        <a href="blog.html" class="blog-read-more">Weiterlesen →</a>
+      </article>
+    </div>
+    <div class="blog-teaser-footer fade-in">
+      <a href="blog.html" class="blog-all-link">Alle Beiträge lesen →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Maria Sicheneder<span>.</span></div>
+  <div class="footer-tagline">Systemisches Coaching · Traumasensible Integration · München · Online</div>
+  <div class="footer-links"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+</footer>
+
+<script>
+  function switchTo(mode) {
+    document.getElementById('panel-biz').classList.toggle('active', mode === 'biz');
+    document.getElementById('panel-priv').classList.toggle('active', mode === 'priv');
+    document.getElementById('btn-biz').classList.toggle('active', mode === 'biz');
+    document.getElementById('btn-priv').classList.toggle('active', mode === 'priv');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setTimeout(initObserver, 300);
+  }
+
+  var obs;
+  function initObserver() {
+    if (obs) obs.disconnect();
+    obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.panel.active .fade-in').forEach(function(el, i) {
+      if (!el.classList.contains('visible')) {
+        el.style.transitionDelay = (i % 4) * 0.08 + 's';
+        obs.observe(el);
+      }
+    });
+  }
+  initObserver();
+
+  document.addEventListener('click', function(e) {
+    var q = e.target.closest('.faq-q');
+    if (!q) return;
+    var item = q.parentElement;
+    var panel = item.closest('.panel');
+    var isOpen = item.classList.contains('open');
+    panel.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+    if (!isOpen) { item.classList.add('open'); }
+  });
+
+  var nav = document.querySelector('nav');
+  window.addEventListener('scroll', function() {
+    nav.style.padding = window.scrollY > 80 ? '1rem 4rem' : '1.4rem 4rem';
+  });
+
+  var CALENDLY_URL = 'https://calendly.com/maria-sicheneder/erstgespraech';
+  function openCalendly(e) {
+    try {
+      if (e) { e.preventDefault(); e.stopPropagation(); }
+      if (typeof Calendly !== 'undefined' && Calendly.initPopupWidget) {
+        Calendly.initPopupWidget({ url: CALENDLY_URL });
+      } else {
+        window.open(CALENDLY_URL, '_blank');
+      }
+    } catch(err) {
+      window.open(CALENDLY_URL, '_blank');
+    }
+    return false;
+  }
+
+  window.addEventListener('load', function() {
+    if (typeof Calendly === 'undefined') {
+      var s = document.createElement('script');
+      s.src = 'https://assets.calendly.com/assets/external/widget.js';
+      document.head.appendChild(s);
+    }
+  });
+</script>
+    <script src="https://visual-feedback-tool.vercel.app/api/embed.js?key=351b1bd16be7baef36ef90a686085547bea6de586407c598" async=""></script>
+</body>
+</html>
