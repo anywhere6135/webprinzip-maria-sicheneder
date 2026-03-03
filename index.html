@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maria Sicheneder – Systemisches Coaching München & Online</title>
-<meta name="description" content="Systemisches Coaching in München & online für Selbständige, Unternehmer und Privatpersonen. Tiefe Veränderung statt Symptombehandlung.">
+<title>Maria Sicheneder – Coaching für Unternehmer:innen | Systemisch & Traumasensibel</title>
+<meta name="description" content="Systemisches Coaching für Selbständige und Unternehmer in München & online. Tiefe Veränderung statt Symptombehandlung. Kostenloses Erstgespräch.">
 <meta name="author" content="Maria Sicheneder">
 <meta name="robots" content="index, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -324,12 +324,21 @@ footer a:hover { color:var(--clay); }
 /* morphBlob animation removed — portrait placeholders are static */
 
 /* Page-level: no audience bar needed, adjust nav top */
-.audience-bar { display:none; }
-nav { top:0 !important; }
-.page-content { padding-top:4rem; }
+
+
+
 </style>
 </head>
 <body>
+<!-- AUDIENCE BAR (as links now) -->
+<div class="audience-bar">
+  <span class="aud-label">Ich suche Coaching als</span>
+  <div class="toggle-wrap">
+    <a href="unternehmer.html" class="toggle-btn active" style="text-decoration:none;">Unternehmer:in</a>
+    <div class="toggle-divider"></div>
+    <a href="privatperson.html" class="toggle-btn" style="text-decoration:none;">Privatperson</a>
+  </div>
+</div>
 
 <nav>
   <a href="index.html" class="nav-logo">Maria Sicheneder<span>.</span></a>
@@ -337,28 +346,217 @@ nav { top:0 !important; }
     <span></span><span></span><span></span>
   </button>
   <ul class="nav-links">
+    <li><a href="#ueber-mich">Über mich</a></li>
+    <li><a href="#angebote">Angebote</a></li>
+    <li><a href="#prozess">Vorgehen</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="blog.html">Blog</a></li>
     <li><a href="#" onclick="openCalendly(event)" class="nav-cta">Erstgespräch</a></li>
   </ul>
 </nav>
 
-<main style="min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:6rem 2rem 4rem;text-align:center;">
-  <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,5vw,3.8rem);font-weight:300;line-height:1.25;color:var(--charcoal);margin-bottom:1rem;">Maria Sicheneder<span style="color:var(--clay);">.</span></h1>
-  <p style="font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--clay);margin-bottom:3rem;">Systemisches Coaching · Traumasensible Integration</p>
-  <p style="font-size:1.05rem;line-height:1.8;color:var(--mist);max-width:50ch;margin-bottom:4rem;font-weight:300;">Ich begleite Menschen, die spüren, dass da mehr ist. Systemisch, traumasensibel, ehrlich — in München und online.</p>
-  
-  <p style="font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--mist);margin-bottom:2rem;">Ich suche Coaching als</p>
-  
-  <div style="display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;">
-    <a href="unternehmer.html" style="display:flex;flex-direction:column;align-items:center;gap:1.2rem;padding:3rem 3.5rem;background:var(--charcoal);color:var(--warm-white);text-decoration:none;border-radius:4px;transition:all 0.3s;min-width:240px;">
-      <span style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;">Unternehmer:in</span>
-      <span style="font-size:0.78rem;color:rgba(250,248,244,0.5);font-weight:300;">Selbständige · Führungskräfte · Gründer</span>
-    </a>
-    <a href="privatperson.html" style="display:flex;flex-direction:column;align-items:center;gap:1.2rem;padding:3rem 3.5rem;background:var(--warm-white);color:var(--charcoal);text-decoration:none;border-radius:4px;border:1px solid var(--sand-dark);transition:all 0.3s;min-width:240px;">
-      <span style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;">Privatperson</span>
-      <span style="font-size:0.78rem;color:var(--mist);font-weight:300;">Persönliche Veränderung · Muster lösen</span>
-    </a>
+<main class="biz">
+<section class="hero">
+  <div class="hero-bg biz"></div>
+  <div class="hero-left">
+    <div class="hero-eyebrow">Systemisches Coaching · Traumasensible Integration</div>
+    <h1>Du tust alles richtig. Und weisst trotzdem, dass da noch <em>mehr</em> ist.</h1>
+    <p class="hero-sub">Für Selbständige und Unternehmer, die nicht mehr kämpfen wollen — sondern endlich ankommen.</p>
+    <div class="hero-cta-group">
+      <a href="#" onclick="openCalendly(event)" class="btn-primary">Kostenloses Erstgespräch →</a>
+      <a href="#ueber-mich" class="btn-ghost">Mehr erfahren</a>
+    </div>
   </div>
+  <div class="hero-right">
+    <div style="width:68%;height:70%;
+  border-radius:60% 40% 50% 50%/60% 50% 50% 40%;
+  background:linear-gradient(135deg,rgba(196,152,122,0.2),rgba(74,92,71,0.12));
+  border:1px solid rgba(196,152,122,0.25);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;font-size:1rem;
+  color:#8c8078;font-style:italic;text-align:center;padding:2rem;">Dein Portrait<br>kommt hier hin</div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div>Scroll</div>
+</section>
+
+<section class="pain-section">
+  <div class="section-header fade-in">
+    <span class="section-label">Du kennst dieses Gefühl</span>
+    <h2 class="section-title">Das ist kein Strategie-Problem. Das ist ein <em>Muster-Problem.</em></h2>
+  </div>
+  <div class="pain-grid">
+    <div class="pain-card fade-in"><p>Du arbeitest viel — aber <strong>Erfolg fühlt sich selten wirklich gut an.</strong></p></div>
+    <div class="pain-card fade-in"><p>Du weisst, was zu tun wäre — und <strong>tust es trotzdem nicht.</strong></p></div>
+    <div class="pain-card fade-in"><p>Du führst nach aussen souverän — und <strong>trägst innen mehr, als andere sehen.</strong></p></div>
+    <div class="pain-card fade-in"><p>Du hast schon vieles versucht — Bücher, Kurse, Strategien — aber <strong>das Muster bleibt.</strong></p></div>
+  </div>
+  <div class="pain-conclusion fade-in">
+    <p>Das sind keine Fehler. Das sind Hinweise. Auf etwas Tieferes — das wartet, erkannt zu werden.</p>
+    <strong>Genau dafür bin ich da.</strong>
+  </div>
+</section>
+
+<section class="dark-section">
+  <div class="section-header fade-in">
+    <span class="section-label">Was mich auszeichnet</span>
+    <h2 class="section-title">Ich arbeite nicht an <em>Symptomen.</em></h2>
+  </div>
+  <div class="usp-grid">
+    <div class="dark-card fade-in"><div class="dark-num">01</div><h3>Ich spreche deine Sprache.</h3><p>Ich bin selbst Unternehmer. Ich kenne den Druck, die Freiheit, die Einsamkeit und die Kraft dieses Weges — aus eigener Erfahrung, nicht aus dem Lehrbuch.</p></div>
+    <div class="dark-card fade-in"><div class="dark-num">02</div><h3>Ich gehe tiefer.</h3><p>Systemisches Coaching trifft auf traumasensible Integration. Nicht nur, was du denkst — sondern was dein Nervensystem, dein Körper und deine Geschichte dir sagen.</p></div>
+    <div class="dark-card fade-in"><div class="dark-num">03</div><h3>Echte Veränderung.</h3><p>Kein neues Wissen. Ein veränderter Blick — auf dich, dein Business, auf das, was wirklich möglich ist. Das ist der Unterschied, den meine Klienten erleben.</p></div>
+  </div>
+</section>
+
+<section class="about-section" id="ueber-mich">
+  <div class="about-visual fade-in">
+    <div class="about-portrait">Dein Portrait<br>hier einfügen</div>
+    <div class="about-badge">Systemische Coach &amp; Beraterin</div>
+  </div>
+  <div class="about-content fade-in">
+    <span class="section-label">Über mich</span>
+    <h2>Maria Sicheneder — Systemische Coach & Expertin für <em>traumasensible Integration</em></h2>
+    <p><em>Es gibt Menschen, die coachen, weil sie eine Ausbildung gemacht haben. Und es gibt Menschen, die coachen, weil sie einen Weg gegangen sind, der sie dazu gemacht hat. Ich gehöre zur zweiten Gruppe.</em></p>
+    <p>Transformation ist nicht mein Angebot. Sie ist mein Weg.</p>
+    <p>Ich kenne den Moment, in dem das alte Muster wieder auftaucht — obwohl man es längst verstanden hat. Die Stille, wenn man nach aussen funktioniert und innen sucht. Den Punkt, an dem mehr Wissen nicht mehr hilft, weil das, was bremst, tiefer sitzt.</p>
+    <div class="about-quote"><p>Ich bringe keine vorgefertigten Antworten in eine Sitzung. Ich bringe echte Aufmerksamkeit — für das, was wirklich da ist. Und die Verlässlichkeit, dass dieser Raum sicher ist. Immer.</p></div>
+    <div style="margin-top:1.8rem;padding-top:1.8rem;border-top:1px solid var(--sand-dark);">
+      <span style="font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--clay);display:block;margin-bottom:1rem;">Ausbildung & Qualifikation</span>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:0.6rem;">
+        <li style="font-size:0.88rem;color:var(--charcoal-soft);padding-left:1.2rem;position:relative;font-weight:300;">
+          <span style="position:absolute;left:0;color:var(--clay);">—</span>Systemische Coach-Ausbildung (zertifiziert)
+        </li>
+        <li style="font-size:0.88rem;color:var(--charcoal-soft);padding-left:1.2rem;position:relative;font-weight:300;">
+          <span style="position:absolute;left:0;color:var(--clay);">—</span>Traumasensibles Coaching — Neurosystemische Integration (in Ausbildung)
+        </li>
+        <li style="font-size:0.88rem;color:var(--charcoal-soft);padding-left:1.2rem;position:relative;font-weight:300;">
+          <span style="position:absolute;left:0;color:var(--clay);">—</span>Psychologiestudium (in Ausbildung, Fernuniversität Hagen)
+        </li>
+      </ul>
+    </div>
+    <a href="#" onclick="openCalendly(event)" class="btn-primary" style="margin-top:1.8rem">Erstgespräch vereinbaren →</a>
+  </div>
+</section>
+
+<section class="services-section" id="angebote">
+  <div class="section-header fade-in">
+    <span class="section-label">Meine Angebote</span>
+    <h2 class="section-title">Was wäre möglich, wenn das, was dich bremst, <em>endlich aufhört?</em></h2>
+  </div>
+  <div class="services-grid">
+    <div class="service-card fade-in">
+      <div class="service-icon">○</div><div class="service-tag">Flexibel &amp; individuell</div>
+      <h3>Einzelcoaching</h3>
+      <p>Die Arbeit, für die es keinen Kurs gibt. Systemisch, traumasensibel, ehrlich — ohne Standardlösungen.</p>
+      <ul class="service-list"><li>Du weisst, was du willst — aber etwas hält zurück</li><li>Immer dieselben Muster im Business</li><li>Du funktionierst — aber der Preis wird höher</li><li>Du willst wachsen — ohne dich selbst zu verlieren</li></ul>
+      <a href="#kontakt" class="btn-service">Anfragen →</a>
+    </div>
+    <div class="service-card featured fade-in">
+      <div class="service-icon">◈</div><div class="service-tag">Empfohlen · Tief &amp; intensiv</div>
+      <h3>Intensiv-Begleitung</h3>
+      <p>Für die, die bereit sind, tiefer und schneller zu gehen. An Wendepunkten, in Wachstumsphasen oder vor grossen Entscheidungen.</p>
+      <ul class="service-list"><li>Wöchentliche Sitzungen</li><li>Konzentrierter 3-Monats-Prozess</li><li>Individuell angepasst — kein festes Programm</li><li>Tiefgang statt Schnelllösung</li><li>Für echten, nachhaltigen Wandel</li></ul>
+      <a href="#" onclick="openCalendly(event)" class="btn-service">Anfragen →</a>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-icon">◇</div><div class="service-tag">Kostenlos · Kein Druck</div>
+      <h3>Erstgespräch</h3>
+      <p>30 Minuten. Du erzählst mir, wo du stehst. Ich höre zu. Kein Verkaufsgespräch — nur Klarheit.</p>
+      <ul class="service-list"><li>Online oder telefonisch</li><li>Keine versteckte Agenda</li><li>Du entscheidest danach frei</li><li>Ehrliche Einschätzung von mir</li></ul>
+      <a href="#" onclick="openCalendly(event)" class="btn-service">Jetzt buchen →</a>
+    </div>
+  </div>
+</section>
+
+<section class="process-section" id="prozess">
+  <div class="section-header fade-in">
+    <span class="section-label">Mein Vorgehen</span>
+    <h2 class="section-title">Wie Veränderung <em>wirklich</em> entsteht</h2>
+  </div>
+  <div class="process-steps">
+    <div class="process-step fade-in"><div class="step-num">01</div><h4>Verstehen</h4><p>Wir schauen gemeinsam, was wirklich da ist — unter der Oberfläche, jenseits der offensichtlichen Themen.</p></div>
+    <div class="process-step fade-in"><div class="step-num">02</div><h4>Erkennen</h4><p>Muster sichtbar machen. Nicht urteilen — verstehen, woher sie kommen und welche Funktion sie hatten.</p></div>
+    <div class="process-step fade-in"><div class="step-num">03</div><h4>Integrieren</h4><p>Traumasensibel und systemisch: Wir arbeiten mit dem ganzen Menschen — Körper, Nervensystem, Geschichte.</p></div>
+    <div class="process-step fade-in"><div class="step-num">04</div><h4>Gestalten</h4><p>Nicht mehr gegen dich. Sondern mit dir. Aus einem neuen Blick heraus — auf dich und was möglich ist.</p></div>
+  </div>
+</section>
+
+<section class="testimonial-section">
+  <blockquote class="testimonial-quote fade-in">„Ich habe aufgehört, nach der richtigen Strategie zu suchen. Und angefangen zu verstehen, warum ich die Strategien, die ich hatte, nie wirklich umgesetzt habe. Das hat sich verändert."</blockquote>
+  <p class="testimonial-author fade-in">[Name], Unternehmerin</p>
+</section>
+
+<section class="faq-section" id="faq">
+  <div class="section-header fade-in">
+    <span class="section-label">Häufige Fragen</span>
+    <h2 class="section-title">Was du vielleicht wissen <em>möchtest</em></h2>
+  </div>
+  <div style="margin-top:3rem">
+    <div class="faq-item fade-in"><div class="faq-q">Ist das Coaching oder Therapie? <span class="faq-toggle">+</span></div><div class="faq-a">Coaching. Das bedeutet: Wir arbeiten ressourcenorientiert mit deiner Gegenwart und Zukunft — nicht therapeutisch mit der Vergangenheit. Traumasensibel bedeutet, dass ich weiss, wie ich respektvoll mit deiner Geschichte umgehe — ohne die Grenze zur Therapie zu überschreiten.</div></div>
+    <div class="faq-item fade-in"><div class="faq-q">Wie läuft das Erstgespräch ab? <span class="faq-toggle">+</span></div><div class="faq-a">30 Minuten, online oder telefonisch, kostenlos. Du erzählst, ich höre zu. Keine Agenda, kein Pitch. Am Ende wissen wir beide, ob und wie ich helfen kann.</div></div>
+    <div class="faq-item fade-in"><div class="faq-q">Wie lange dauert ein Prozess? <span class="faq-toggle">+</span></div><div class="faq-a">Das hängt von dir und deinem Anliegen ab. Manche Themen klären sich in wenigen Sitzungen. Tiefere Muster brauchen Zeit. Das sprechen wir im Erstgespräch ehrlich an.</div></div>
+    <div class="faq-item fade-in"><div class="faq-q">Ich habe schon viele Coachings gemacht. Was ist hier anders? <span class="faq-toggle">+</span></div><div class="faq-a">Der Unterschied liegt nicht in der Methode — sondern darin, wo wir ansetzen. Wir arbeiten nicht an Strategien. Wir arbeiten an dem, was Strategien blockiert.</div></div>
+    <div class="faq-item fade-in"><div class="faq-q">Ist das Coaching vertraulich? <span class="faq-toggle">+</span></div><div class="faq-a">Vollständig. Was zwischen uns besprochen wird, bleibt zwischen uns. Immer — ohne Ausnahme.</div></div>
+  </div>
+</section>
+
+<section class="cta-strip">
+  <h2>Das Gespräch, das alles verändern kann,<br>dauert 30 Minuten.</h2>
+  <p>Kostenlos, unverbindlich, ehrlich.</p>
+  <button onclick="openCalendly(event)" class="btn-white">Erstgespräch vereinbaren →</button>
+</section>
+
+<section class="contact-section" id="kontakt">
+  <div class="contact-info fade-in">
+    <span class="section-label">Kontakt</span>
+    <h2>Der erste Schritt ist einfacher als du <em>denkst.</em></h2>
+    <p>Schreib mir. Es braucht keine perfekte Formulierung. Ich antworte persönlich — in der Regel innerhalb von 24 Stunden.</p>
+    <div>
+      <div class="contact-detail"><span class="contact-detail-label">Email</span><a href="mailto:info@maria-sicheneder.com">info@maria-sicheneder.com</a></div>
+      <div class="contact-detail"><span class="contact-detail-label">Telefon</span>[optional]</div>
+      <div class="contact-detail"><span class="contact-detail-label">Ort</span>München · Online</div>
+    </div>
+  </div>
+  <div class="fade-in">
+    <div class="form-group"><label class="form-label">Dein Name</label><input type="text" class="form-control" placeholder="Wie soll ich dich ansprechen?"></div>
+    <div class="form-group"><label class="form-label">E-Mail</label><input type="email" class="form-control" placeholder="deine@email.de"></div>
+    <div class="form-group"><label class="form-label">Was bewegt dich gerade?</label><textarea class="form-control" placeholder="Erzähl mir, was dich herführt — keine perfekte Formulierung nötig."></textarea></div>
+    <button class="btn-primary" onclick="sendContactForm(this,'biz')" style="width:100%;text-align:center;border:none;padding:1rem;">Nachricht senden →</button>
+  </div>
+</section>
+
+
+<section class="blog-teaser-section">
+  <div class="blog-teaser-inner">
+    <div class="section-header fade-in">
+      <span class="blog-section-label">Gedanken & Impulse</span>
+      <h2 class="blog-section-title">Neueste <em>Beiträge</em></h2>
+    </div>
+    <div class="blog-grid">
+      <article class="blog-card fade-in">
+        <time class="blog-date">15. Februar 2026</time>
+        <h3 class="blog-card-title">Warum Willenskraft das falsche Werkzeug ist</h3>
+        <p class="blog-card-excerpt">Wir glauben, dass wir es einfach mehr wollen müssen. Mehr Disziplin, mehr Konsequenz. Doch was, wenn das Problem gar nicht der Wille ist?</p>
+        <a href="blog-willenskraft.html" class="blog-read-more">Weiterlesen →</a>
+      </article>
+      <article class="blog-card fade-in">
+        <time class="blog-date">28. Januar 2026</time>
+        <h3 class="blog-card-title">Das Muster, das immer wiederkommt</h3>
+        <p class="blog-card-excerpt">Dieselbe Situation, dieselbe Reaktion — obwohl man es längst besser weiß. Was steckt hinter Wiederholungen, die sich trotz Verstand nicht ändern?</p>
+        <a href="blog-muster.html" class="blog-read-more">Weiterlesen →</a>
+      </article>
+      <article class="blog-card fade-in">
+        <time class="blog-date">10. Januar 2026</time>
+        <h3 class="blog-card-title">Funktionieren ist kein Leben</h3>
+        <p class="blog-card-excerpt">Nach außen läuft alles. Innen ist es still geworden. Viele meiner Klientinnen kennen dieses Gefühl — und fragen sich, ob das alles sein kann.</p>
+        <a href="blog.html" class="blog-read-more">Weiterlesen →</a>
+      </article>
+    </div>
+    <div class="blog-teaser-footer fade-in">
+      <a href="blog.html" class="blog-all-link">Alle Beiträge lesen →</a>
+    </div>
+  </div>
+</section>
 </main>
 
 <!-- FOOTER -->
@@ -369,17 +567,69 @@ nav { top:0 !important; }
 </footer>
 
 <script>
+
+  );
+    setTimeout(initObserver, 300);
+  }
+
+  var obs;
+  function initObserver() {
+    if (obs) obs.disconnect();
+    obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-in').forEach(function(el, i) {
+      if (!el.classList.contains('visible')) {
+        el.style.transitionDelay = (i % 4) * 0.08 + 's';
+        obs.observe(el);
+      }
+    });
+  }
+  initObserver();
+
+  document.addEventListener('click', function(e) {
+    var q = e.target.closest('.faq-q');
+    if (!q) return;
+    var item = q.parentElement;
+    var panel = item.closest('main') || document.body;
+    var isOpen = item.classList.contains('open');
+    panel.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+    if (!isOpen) { item.classList.add('open'); }
+  });
+
+  var nav = document.querySelector('nav');
+  window.addEventListener('scroll', function() {
+    nav.style.padding = window.scrollY > 80 ? '1rem 4rem' : '1.4rem 4rem';
+  });
+
   var CALENDLY_URL = 'https://calendly.com/maria-sicheneder/erstgespraech';
   function openCalendly(e) {
-    try { if (e) { e.preventDefault(); e.stopPropagation(); }
-      if (typeof Calendly !== 'undefined' && Calendly.initPopupWidget) { Calendly.initPopupWidget({ url: CALENDLY_URL }); }
-      else { window.open(CALENDLY_URL, '_blank'); }
-    } catch(err) { window.open(CALENDLY_URL, '_blank'); }
+    try {
+      if (e) { e.preventDefault(); e.stopPropagation(); }
+      if (typeof Calendly !== 'undefined' && Calendly.initPopupWidget) {
+        Calendly.initPopupWidget({ url: CALENDLY_URL });
+      } else {
+        window.open(CALENDLY_URL, '_blank');
+      }
+    } catch(err) {
+      window.open(CALENDLY_URL, '_blank');
+    }
     return false;
   }
+
   window.addEventListener('load', function() {
-    if (typeof Calendly === 'undefined') { var s = document.createElement('script'); s.src = 'https://assets.calendly.com/assets/external/widget.js'; document.head.appendChild(s); }
+    if (typeof Calendly === 'undefined') {
+      var s = document.createElement('script');
+      s.src = 'https://assets.calendly.com/assets/external/widget.js';
+      document.head.appendChild(s);
+    }
   });
+
 </script>
 <script src="https://visual-feedback-tool.vercel.app/api/embed.js?key=351b1bd16be7baef36ef90a686085547bea6de586407c598" async=""></script>
 </body>
