@@ -60,10 +60,16 @@
 
 ## 03.03.2026
 
-### 🔨 Implementierung: Bugfixes nach Florian-Review
+### 🔨 Implementierung: Bugfixes + Unterseiten-Umbau
 - ✅ E-Mail-Typo korrigiert: `siecheneder` → `sicheneder` (Kontaktformular beider Views)
 - ✅ Hamburger-Menü für Mobile eingebaut (Nav war auf Mobile komplett unsichtbar)
-- ✅ Blog-Sektion in beide Panels (Unternehmer + Privatperson) verschoben — war vorher außerhalb der Panels und daher auf Mobile nicht korrekt sichtbar
+- ✅ **Großer Umbau: Unternehmer + Privatperson als eigene HTML-Seiten**
+  - `index.html` → Chooser-Seite (Auswahl Unternehmer:in / Privatperson)
+  - `unternehmer.html` → Eigenständige Seite mit Biz-Content
+  - `privatperson.html` → Eigenständige Seite mit Priv-Content
+  - Audience-Bar oben als Navigation zwischen den Seiten
+  - Blog-Teaser auf beiden Seiten unten
+  - Hamburger-Menü auf allen Seiten
 - Alle Änderungen auf Vercel deployed
 
 ---
