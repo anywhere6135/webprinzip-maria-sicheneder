@@ -58,6 +58,16 @@
 
 ---
 
+## 03.03.2026
+
+### 🔨 Implementierung: Bugfixes nach Florian-Review
+- ✅ E-Mail-Typo korrigiert: `siecheneder` → `sicheneder` (Kontaktformular beider Views)
+- ✅ Hamburger-Menü für Mobile eingebaut (Nav war auf Mobile komplett unsichtbar)
+- ✅ Blog-Sektion in beide Panels (Unternehmer + Privatperson) verschoben — war vorher außerhalb der Panels und daher auf Mobile nicht korrekt sichtbar
+- Alle Änderungen auf Vercel deployed
+
+---
+
 ## Offene Punkte
 - 8 Website-Tasks offen (Animation, Fotos, FAQ, Impressum, Datenschutz, Blog) → `Aufgaben.md`
 - Termin-Bestätigung von Maria für Do 05.03. 13:00 noch ausstehend
