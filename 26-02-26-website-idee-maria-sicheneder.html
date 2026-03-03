@@ -61,18 +61,6 @@ nav {
 .nav-cta { background:var(--charcoal)!important; color:var(--warm-white)!important; padding:0.6rem 1.4rem; border-radius:2px; cursor:pointer; }
 .nav-cta:hover { background:var(--clay-deep)!important; }
 
-/* HAMBURGER */
-.hamburger { display:none; background:none; border:none; cursor:pointer; padding:0.5rem; z-index:201; }
-.hamburger span { display:block; width:22px; height:2px; background:var(--charcoal); margin:5px 0; transition:all 0.3s; }
-.hamburger.open span:nth-child(1) { transform:rotate(45deg) translate(5px,5px); }
-.hamburger.open span:nth-child(2) { opacity:0; }
-.hamburger.open span:nth-child(3) { transform:rotate(-45deg) translate(5px,-5px); }
-@media(max-width:900px) {
-  .hamburger { display:block; }
-  .nav-links { display:none; flex-direction:column; position:absolute; top:100%; left:0; right:0; background:rgba(250,248,244,0.98); backdrop-filter:blur(12px); padding:2rem; gap:1.5rem; border-bottom:1px solid rgba(196,152,122,0.15); }
-  .nav-links.mobile-open { display:flex; }
-}
-
 /* PANELS */
 .panel { display:none; padding-top:6rem; }
 .panel.active { display:block; }
@@ -170,7 +158,7 @@ nav {
 .about-visual { position:relative; }
 .about-portrait { width:100%; aspect-ratio:4/5; border-radius:6px; overflow:hidden; border:1px solid rgba(196,152,122,0.2); }
 .about-portrait img { width:100%; height:100%; object-fit:cover; object-position:center top; }
-.about-badge { position:absolute; width:7rem; height:7rem; border-radius:50%; display:flex; align-items:center; justify-content:center; text-align:center; color:white; font-size:0.65rem; letter-spacing:0.08em; text-transform:uppercase; line-height:1.4; }
+.about-badge { position:absolute; width:7rem; height:7rem; border-radius:50%; display:flex; align-items:center; justify-content:center; text-align:center; color:white; font-size:0.65rem; letter-spacing:0.08em; text-transform:uppercase; line-height:1.4; animation:rotateBadge 20s linear infinite; }
 .biz .about-badge { background:var(--moss); bottom:-1.5rem; right:-1.5rem; }
 .priv .about-badge { background:var(--dusk); bottom:-1.5rem; left:-1.5rem; }
 .about-content h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,3.5vw,2.8rem); font-weight:300; line-height:1.25; margin-bottom:1.8rem; }
@@ -255,44 +243,6 @@ nav {
 .priv .form-control:focus { border-color:var(--rose); background:white; }
 textarea.form-control { resize:vertical; min-height:120px; }
 
-/* BLOG TEASER */
-.blog-teaser-section { padding:7rem 6rem; background:var(--sand); }
-.blog-teaser-inner { max-width:1050px; margin:0 auto; }
-.blog-section-label { font-size:0.72rem; letter-spacing:0.25em; text-transform:uppercase; color:var(--clay); margin-bottom:1.2rem; display:block; }
-.blog-section-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,4vw,3.2rem); font-weight:300; line-height:1.25; color:var(--charcoal); }
-.blog-section-title em { font-style:italic; color:var(--clay); }
-.blog-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; margin-top:4rem; }
-.blog-card { background:var(--warm-white); border:1px solid rgba(196,152,122,0.2); padding:2.2rem; border-radius:4px; display:flex; flex-direction:column; gap:0.8rem; transition:transform 0.3s,box-shadow 0.3s; }
-.blog-card:hover { transform:translateY(-3px); box-shadow:0 12px 40px rgba(44,40,36,0.08); }
-.blog-date { font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--clay); }
-.blog-card-title { font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-weight:400; color:var(--charcoal); line-height:1.35; }
-.blog-card-excerpt { font-size:0.88rem; line-height:1.75; color:var(--mist); font-weight:300; flex:1; }
-.blog-read-more { font-size:0.82rem; color:var(--clay); text-decoration:none; letter-spacing:0.05em; border-bottom:1px solid rgba(196,152,122,0.4); padding-bottom:2px; align-self:flex-start; transition:color 0.2s,border-color 0.2s; }
-.blog-read-more:hover { color:var(--charcoal); border-color:var(--charcoal); }
-.blog-teaser-footer { text-align:center; margin-top:3rem; }
-.blog-all-link { font-size:0.88rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--charcoal); text-decoration:none; border-bottom:1px solid var(--sand-dark); padding-bottom:3px; transition:color 0.2s,border-color 0.2s; }
-.blog-all-link:hover { color:var(--clay); border-color:var(--clay); }
-@media(max-width:900px) {
-  .blog-teaser-section { padding:5rem 2rem; }
-  .blog-grid { grid-template-columns:1fr; }
-}
-
-/* SERVICES DARK (Privatperson "Der Rahmen für Veränderung") */
-.services-section.dark-variant { background:var(--charcoal); }
-.services-section.dark-variant .section-label { color:var(--rose); }
-.services-section.dark-variant .section-title { color:var(--warm-white); }
-.services-section.dark-variant .section-title em { color:var(--dusk); }
-.services-section.dark-variant .service-card { background:rgba(255,255,255,0.04); border-color:rgba(255,255,255,0.08); color:var(--warm-white); }
-.services-section.dark-variant .service-card h3 { color:var(--warm-white); }
-.services-section.dark-variant .service-card p { color:rgba(250,248,244,0.5); }
-.services-section.dark-variant .service-tag { color:var(--rose); }
-.services-section.dark-variant .service-list li { color:rgba(250,248,244,0.6); border-color:rgba(255,255,255,0.07); }
-.services-section.dark-variant .service-list li::before { color:var(--rose); }
-.services-section.dark-variant .service-card:hover { background:rgba(255,255,255,0.08); border-color:rgba(192,139,122,0.3); }
-.services-section.dark-variant .service-card.featured { background:var(--dusk); border-color:transparent; }
-.services-section.dark-variant .service-icon { color:var(--rose); }
-.services-section.dark-variant .service-card.featured .service-icon { color:rgba(255,255,255,0.4); }
-
 /* FOOTER */
 footer { background:var(--charcoal); color:rgba(250,248,244,0.45); padding:3rem 6rem; display:flex; align-items:center; justify-content:space-between; font-size:0.8rem; letter-spacing:0.05em; }
 footer a { color:rgba(250,248,244,0.35); text-decoration:none; transition:color 0.2s; }
@@ -304,7 +254,7 @@ footer a:hover { color:var(--clay); }
 /* ANIMATIONS */
 @keyframes fadeUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
 @keyframes scrollPulse { 0%,100% { opacity:0.4; } 50% { opacity:1; } }
-/* rotateBadge removed — badge is now static */
+@keyframes rotateBadge { to { transform:rotate(360deg); } }
 .fade-in { opacity:0; transform:translateY(24px); transition:opacity 0.7s ease,transform 0.7s ease; }
 .fade-in.visible { opacity:1; transform:translateY(0); }
 
@@ -312,6 +262,7 @@ footer a:hover { color:var(--clay); }
 @media(max-width:900px) {
   .aud-label { display:none; }
   nav { padding:1.2rem 2rem; }
+  .nav-links { display:none; }
   .hero { grid-template-columns:1fr; }
   .hero-right { display:none; }
   .hero-left { padding:5rem 2rem 4rem; }
@@ -325,7 +276,11 @@ footer a:hover { color:var(--clay); }
   footer { flex-direction:column; gap:1.5rem; text-align:center; padding:2.5rem 2rem; }
 }
 
-/* morphBlob animation removed — portrait placeholders are static */
+@keyframes morphBlob {
+  0%, 100% { border-radius: 60% 40% 50% 50% / 60% 50% 50% 40%; }
+  33% { border-radius: 40% 60% 55% 45% / 45% 55% 45% 55%; }
+  66% { border-radius: 55% 45% 40% 60% / 50% 40% 60% 50%; }
+}
 </style>
 </head>
 <body>
@@ -343,15 +298,11 @@ footer a:hover { color:var(--clay); }
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">Maria Sicheneder<span>.</span></a>
-  <button class="hamburger" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('mobile-open');" aria-label="Menü">
-    <span></span><span></span><span></span>
-  </button>
   <ul class="nav-links">
     <li><a href="#ueber-mich">Über mich</a></li>
     <li><a href="#angebote">Angebote</a></li>
     <li><a href="#prozess">Vorgehen</a></li>
     <li><a href="#faq">FAQ</a></li>
-    <li><a href="blog.html">Blog</a></li>
     <li><a href="#" onclick="openCalendly(event)" class="nav-cta">Erstgespräch</a></li>
   </ul>
 </nav>
@@ -376,7 +327,8 @@ footer a:hover { color:var(--clay); }
   border:1px solid rgba(196,152,122,0.25);
   display:flex;align-items:center;justify-content:center;
   font-family:'Cormorant Garamond',serif;font-size:1rem;
-  color:#8c8078;font-style:italic;text-align:center;padding:2rem;">Dein Portrait<br>kommt hier hin</div>
+  color:#8c8078;font-style:italic;text-align:center;padding:2rem;
+  animation:morphBlob 9s ease-in-out infinite;">Dein Portrait<br>kommt hier hin</div>
   </div>
   <div class="hero-scroll"><div class="scroll-line"></div>Scroll</div>
 </section>
@@ -514,7 +466,7 @@ footer a:hover { color:var(--clay); }
     <h2>Der erste Schritt ist einfacher als du <em>denkst.</em></h2>
     <p>Schreib mir. Es braucht keine perfekte Formulierung. Ich antworte persönlich — in der Regel innerhalb von 24 Stunden.</p>
     <div>
-      <div class="contact-detail"><span class="contact-detail-label">Email</span><a href="mailto:info@maria-sicheneder.com">info@maria-sicheneder.com</a></div>
+      <div class="contact-detail"><span class="contact-detail-label">Email</span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d6b2b3bfb8b396b3bbb7bfbaf8b2b3">[email&#160;protected]</a></div>
       <div class="contact-detail"><span class="contact-detail-label">Telefon</span>[optional]</div>
       <div class="contact-detail"><span class="contact-detail-label">Ort</span>München · Online</div>
     </div>
@@ -523,7 +475,7 @@ footer a:hover { color:var(--clay); }
     <div class="form-group"><label class="form-label">Dein Name</label><input type="text" class="form-control" placeholder="Wie soll ich dich ansprechen?"></div>
     <div class="form-group"><label class="form-label">E-Mail</label><input type="email" class="form-control" placeholder="deine@email.de"></div>
     <div class="form-group"><label class="form-label">Was bewegt dich gerade?</label><textarea class="form-control" placeholder="Erzähl mir, was dich herführt — keine perfekte Formulierung nötig."></textarea></div>
-    <button class="btn-primary" onclick="sendContactForm(this,'biz')" style="width:100%;text-align:center;border:none;padding:1rem;">Nachricht senden →</button>
+    <button class="btn-primary" style="width:100%;text-align:center;border:none;padding:1rem;">Nachricht senden →</button>
   </div>
 </section>
 
@@ -551,7 +503,8 @@ footer a:hover { color:var(--clay); }
   border:1px solid rgba(192,139,122,0.22);
   display:flex;align-items:center;justify-content:center;
   font-family:'Cormorant Garamond',serif;font-size:1rem;
-  color:#8c8078;font-style:italic;text-align:center;padding:2rem;">Dein Portrait<br>kommt hier hin</div>
+  color:#8c8078;font-style:italic;text-align:center;padding:2rem;
+  animation:morphBlob 9s ease-in-out infinite;">Dein Portrait<br>kommt hier hin</div>
   </div>
   <div class="hero-scroll"><div class="scroll-line"></div>Scroll</div>
 </section>
@@ -608,7 +561,7 @@ footer a:hover { color:var(--clay); }
   </div>
 </section>
 
-<section class="services-section dark-variant" id="angebote-priv">
+<section class="services-section" id="angebote-priv">
   <div class="section-header fade-in">
     <span class="section-label">Meine Angebote</span>
     <h2 class="section-title">Der Rahmen für <em>deine Veränderung</em></h2>
@@ -682,7 +635,7 @@ footer a:hover { color:var(--clay); }
     <h2>Schreib mir —<br>so wie es sich <em>gerade anfühlt.</em></h2>
     <p>Es braucht keine perfekte Formulierung. Kein klares Anliegen. Schreib einfach. Ich antworte persönlich — in der Regel innerhalb von 24 Stunden.</p>
     <div>
-      <div class="contact-detail"><span class="contact-detail-label">Email</span><a href="mailto:info@maria-sicheneder.com">info@maria-sicheneder.com</a></div>
+      <div class="contact-detail"><span class="contact-detail-label">Email</span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7612131f181336131b171f1a581213">[email&#160;protected]</a></div>
       <div class="contact-detail"><span class="contact-detail-label">Telefon</span>[optional]</div>
       <div class="contact-detail"><span class="contact-detail-label">Ort</span>München · Online</div>
     </div>
@@ -697,44 +650,11 @@ footer a:hover { color:var(--clay); }
 
 </div><!-- /panel-priv -->
 
-<!-- BLOG TEASER SECTION -->
-<section class="blog-teaser-section">
-  <div class="blog-teaser-inner">
-    <div class="section-header fade-in">
-      <span class="blog-section-label">Gedanken & Impulse</span>
-      <h2 class="blog-section-title">Neueste <em>Beiträge</em></h2>
-    </div>
-    <div class="blog-grid">
-      <article class="blog-card fade-in">
-        <time class="blog-date">15. Februar 2026</time>
-        <h3 class="blog-card-title">Warum Willenskraft das falsche Werkzeug ist</h3>
-        <p class="blog-card-excerpt">Wir glauben, dass wir es einfach mehr wollen müssen. Mehr Disziplin, mehr Konsequenz. Doch was, wenn das Problem gar nicht der Wille ist?</p>
-        <a href="blog-willenskraft.html" class="blog-read-more">Weiterlesen →</a>
-      </article>
-      <article class="blog-card fade-in">
-        <time class="blog-date">28. Januar 2026</time>
-        <h3 class="blog-card-title">Das Muster, das immer wiederkommt</h3>
-        <p class="blog-card-excerpt">Dieselbe Situation, dieselbe Reaktion — obwohl man es längst besser weiß. Was steckt hinter Wiederholungen, die sich trotz Verstand nicht ändern?</p>
-        <a href="blog-muster.html" class="blog-read-more">Weiterlesen →</a>
-      </article>
-      <article class="blog-card fade-in">
-        <time class="blog-date">10. Januar 2026</time>
-        <h3 class="blog-card-title">Funktionieren ist kein Leben</h3>
-        <p class="blog-card-excerpt">Nach außen läuft alles. Innen ist es still geworden. Viele meiner Klientinnen kennen dieses Gefühl — und fragen sich, ob das alles sein kann.</p>
-        <a href="blog.html" class="blog-read-more">Weiterlesen →</a>
-      </article>
-    </div>
-    <div class="blog-teaser-footer fade-in">
-      <a href="blog.html" class="blog-all-link">Alle Beiträge lesen →</a>
-    </div>
-  </div>
-</section>
-
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">Maria Sicheneder<span>.</span></div>
-  <div class="footer-tagline">Systemisches Coaching · Traumasensible Integration · München · Online</div>
-  <div class="footer-links"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+  <div style="font-size:0.78rem;letter-spacing:0.05em">Systemisches Coaching · Traumasensible Integration · München · Online</div>
+  <div class="footer-links"><a href="#">Impressum</a><a href="#">Datenschutz</a></div>
 </footer>
 
 <script>
@@ -772,9 +692,8 @@ footer a:hover { color:var(--clay); }
     if (!q) return;
     var item = q.parentElement;
     var panel = item.closest('.panel');
-    var isOpen = item.classList.contains('open');
     panel.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
-    if (!isOpen) { item.classList.add('open'); }
+    item.classList.add('open');
   });
 
   var nav = document.querySelector('nav');
@@ -805,6 +724,5 @@ footer a:hover { color:var(--clay); }
     }
   });
 </script>
-    <script src="https://visual-feedback-tool.vercel.app/api/embed.js?key=351b1bd16be7baef36ef90a686085547bea6de586407c598" async=""></script>
 </body>
 </html>
