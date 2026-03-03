@@ -1,6 +1,6 @@
 # Aufgaben – Maria Sicheneder
 
-Zuletzt aktualisiert: 2025-07-25 14:30
+Zuletzt aktualisiert: 2026-03-03 11:00
 Kommunikationsmodus: Du
 Projektphase: **Website live auf Vercel** ✅
 Nächstes Meeting: Do, 05.03.2026 · 13:00 Uhr
@@ -10,9 +10,20 @@ Nächstes Meeting: Do, 05.03.2026 · 13:00 Uhr
 ## 🌐 Ressourcen (Meeting-Quick-Access)
 | | |
 |---|---|
-| **Live-URL** | https://maria-sicheneder-claw-anywhere6135s-projects.vercel.app |
+| **Home (Unternehmer)** | https://maria-sicheneder-claw-anywhere6135s-projects.vercel.app |
+| **Privatperson** | https://maria-sicheneder-claw-anywhere6135s-projects.vercel.app/privatperson.html |
+| **Blog** | https://maria-sicheneder-claw-anywhere6135s-projects.vercel.app/blog.html |
 | **GitHub Repo** | https://github.com/anywhere6135/webprinzip-maria-sicheneder |
 | **Nextcloud** | https://nextcloud.anywhere6135.de/index.php/s/K7r3Jd9FJxFrcWD |
+
+### Seitenstruktur
+- `index.html` — Unternehmer-Seite (= Home)
+- `privatperson.html` — Privatperson-Seite
+- `blog.html` — Blog-Übersicht
+- `blog-willenskraft.html` / `blog-muster.html` — Beispiel-Blogposts
+- `impressum.html` / `datenschutz.html` — Rechtliches
+- Audience-Bar oben verlinkt zwischen Unternehmer ↔ Privatperson
+- Hamburger-Menü auf Mobile
 
 ---
 
@@ -24,14 +35,17 @@ Nächstes Meeting: Do, 05.03.2026 · 13:00 Uhr
 - ~~E-Mail-Adresse `info@maria-sicheneder.com`~~ — eingerichtet (Mo 02.03.) ✅
 - ~~Website aufsetzen~~ — **Live auf Vercel seit 02.03.** ✅
 - ~~Termin Do 14:00~~ → **Do 13:00 vorgeschlagen** ✅ (Maria antwortet noch)
-- ~~Animation entfernen (drehendes Element → statisch)~~ ✅ (im Code umgesetzt)
-- ~~Privatperson-Sektion schwarz machen~~ ✅ (dark-variant CSS im Code)
-- ~~FAQ zugklappbar (Akkordeon)~~ ✅ (JS + CSS funktioniert)
-- ~~Kontaktformular-Email → `info@maria-sicheneder.com`~~ ✅ (E-Mail-Typo korrigiert 25.07.)
-- ~~Blog-Sektion auf Landingpage~~ ✅ (3-Karten-Grid vor Footer)
-- ~~Blog-Unterseite anlegen~~ ✅ (blog.html + 2 Beispiel-Posts: Willenskraft, Muster)
+- ~~Animation entfernen (drehendes Element → statisch)~~ ✅
+- ~~Privatperson-Sektion schwarz machen~~ ✅ (dark-variant CSS)
+- ~~FAQ zugklappbar (Akkordeon)~~ ✅
+- ~~Kontaktformular-Email → `info@maria-sicheneder.com`~~ ✅
+- ~~Blog-Sektion auf beiden Seiten~~ ✅ (3-Karten-Grid, Teaser auf Unternehmer + Privatperson)
+- ~~Blog-Unterseite anlegen~~ ✅ (blog.html + 2 Beispiel-Posts)
 - ~~Datenschutz einpflegen~~ ✅ (datenschutz.html vollständig)
-- ~~E-Mail-Typo auf allen Seiten~~ ✅ (siecheneder→sicheneder, gepusht 25.07.)
+- ~~E-Mail-Typo auf allen Seiten~~ ✅ (siecheneder→sicheneder)
+- ~~Hamburger-Menü Mobile~~ ✅ (03.03.)
+- ~~Unternehmer + Privatperson als eigene Seiten~~ ✅ (03.03., vorher Panel-Toggle)
+- ~~Chooser-Page entfernt, Unternehmer = Home~~ ✅ (03.03.)
 
 ---
 
@@ -68,3 +82,4 @@ Nächstes Meeting: Do, 05.03.2026 · 13:00 Uhr
 - Telefonnummer im Footer (wenn Maria es möchte)
 - Pusteblumen-Logo (entschieden: nicht nötig)
 - Preise in FAQ (bewusst weggelassen)
+- `unternehmer.html` kann entfernt werden (Duplikat von index.html)
