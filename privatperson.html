@@ -301,7 +301,9 @@ footer a:hover { color:var(--clay); }
 @keyframes fadeUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
 @keyframes scrollPulse { 0%,100% { opacity:0.4; } 50% { opacity:1; } }
 /* rotateBadge removed — badge is now static */
-.fade-in { opacity:0; transform:translateY(24px); transition:opacity 0.7s ease,transform 0.7s ease; }
+.fade-in { opacity:1; transform:none; transition:opacity 0.7s ease,transform 0.7s ease; }
+html.js-ready .fade-in { opacity:0; transform:translateY(24px); }
+html.js-ready .fade-in.visible { opacity:1; transform:translateY(0); }
 .fade-in.visible { opacity:1; transform:translateY(0); }
 
 /* RESPONSIVE */
@@ -564,6 +566,8 @@ footer a:hover { color:var(--clay); }
   );
     setTimeout(initObserver, 300);
   }
+
+  document.documentElement.classList.add('js-ready');
 
   var obs;
   function initObserver() {
