@@ -78,7 +78,7 @@ nav {
 .hero-bg { position:absolute; inset:0; pointer-events:none; }
 .hero-bg.biz { background: radial-gradient(ellipse 80% 60% at 70% 40%, rgba(196,152,122,0.08) 0%, transparent 60%), radial-gradient(ellipse 60% 80% at 20% 70%, rgba(74,92,71,0.06) 0%, transparent 60%); }
 .hero-bg.priv { background: radial-gradient(ellipse 70% 60% at 75% 35%, rgba(192,139,122,0.1) 0%, transparent 60%), radial-gradient(ellipse 50% 70% at 15% 75%, rgba(122,110,138,0.07) 0%, transparent 60%); }
-.hero-left { padding:6rem 4rem 5rem 6rem; position:relative; z-index:2; animation:fadeUp 0.8s ease forwards; }
+.hero-left { padding:8rem 4rem 5rem 6rem; position:relative; z-index:2; animation:fadeUp 0.8s ease forwards; }
 .hero-eyebrow { font-size:0.75rem; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1.8rem; display:flex; align-items:center; gap:0.8rem; }
 .hero-eyebrow::before { content:''; width:2rem; height:1px; display:block; }
 .biz .hero-eyebrow { color:var(--clay); } .biz .hero-eyebrow::before { background:var(--clay); }
@@ -369,13 +369,7 @@ html.js-ready .fade-in.visible { opacity:1; transform:translateY(0); }
     </div>
   </div>
   <div class="hero-right">
-    <div style="width:68%;height:70%;
-  border-radius:60% 40% 50% 50%/60% 50% 50% 40%;
-  background:linear-gradient(135deg,rgba(196,152,122,0.2),rgba(74,92,71,0.12));
-  border:1px solid rgba(196,152,122,0.25);
-  display:flex;align-items:center;justify-content:center;
-  font-family:'Cormorant Garamond',serif;font-size:1rem;
-  color:#8c8078;font-style:italic;text-align:center;padding:2rem;">Dein Portrait<br>kommt hier hin</div>
+    <img src="hero.jpg" alt="Maria Sicheneder">
   </div>
   <div class="hero-scroll"><div class="scroll-line"></div>Scroll</div>
 </section>
@@ -501,32 +495,6 @@ html.js-ready .fade-in.visible { opacity:1; transform:translateY(0); }
   </div>
 </section>
 
-<section class="cta-strip">
-  <h2>Das Gespräch, das alles verändern kann,<br>dauert 30 Minuten.</h2>
-  <p>Kostenlos, unverbindlich, ehrlich.</p>
-  <button onclick="openCalendly(event)" class="btn-white">Erstgespräch vereinbaren →</button>
-</section>
-
-<section class="contact-section" id="kontakt">
-  <div class="contact-info fade-in">
-    <span class="section-label">Kontakt</span>
-    <h2>Der erste Schritt ist einfacher als du <em>denkst.</em></h2>
-    <p>Schreib mir. Es braucht keine perfekte Formulierung. Ich antworte persönlich — in der Regel innerhalb von 24 Stunden.</p>
-    <div>
-      <div class="contact-detail"><span class="contact-detail-label">Email</span><a href="mailto:info@maria-sicheneder.com">info@maria-sicheneder.com</a></div>
-      <div class="contact-detail"><span class="contact-detail-label">Telefon</span>[optional]</div>
-      <div class="contact-detail"><span class="contact-detail-label">Ort</span>München · Online</div>
-    </div>
-  </div>
-  <div class="fade-in">
-    <div class="form-group"><label class="form-label">Dein Name</label><input type="text" class="form-control" placeholder="Wie soll ich dich ansprechen?"></div>
-    <div class="form-group"><label class="form-label">E-Mail</label><input type="email" class="form-control" placeholder="deine@email.de"></div>
-    <div class="form-group"><label class="form-label">Was bewegt dich gerade?</label><textarea class="form-control" placeholder="Erzähl mir, was dich herführt — keine perfekte Formulierung nötig."></textarea></div>
-    <button class="btn-primary" onclick="sendContactForm(this,'biz')" style="width:100%;text-align:center;border:none;padding:1rem;">Nachricht senden →</button>
-  </div>
-</section>
-
-
 <section class="blog-teaser-section">
   <div class="blog-teaser-inner">
     <div class="section-header fade-in">
@@ -558,6 +526,31 @@ html.js-ready .fade-in.visible { opacity:1; transform:translateY(0); }
     </div>
   </div>
 </section>
+
+<section class="cta-strip">
+  <h2>Das Gespräch, das alles verändern kann,<br>dauert 30 Minuten.</h2>
+  <p>Kostenlos, unverbindlich, ehrlich.</p>
+  <button onclick="openCalendly(event)" class="btn-white">Erstgespräch vereinbaren →</button>
+</section>
+
+<section class="contact-section" id="kontakt">
+  <div class="contact-info fade-in">
+    <span class="section-label">Kontakt</span>
+    <h2>Der erste Schritt ist einfacher als du <em>denkst.</em></h2>
+    <p>Schreib mir. Es braucht keine perfekte Formulierung. Ich antworte persönlich — in der Regel innerhalb von 24 Stunden.</p>
+    <div>
+      <div class="contact-detail"><span class="contact-detail-label">Email</span><a href="mailto:info@maria-sicheneder.com">info@maria-sicheneder.com</a></div>
+      <div class="contact-detail"><span class="contact-detail-label">Telefon</span>[optional]</div>
+      <div class="contact-detail"><span class="contact-detail-label">Ort</span>München · Online</div>
+    </div>
+  </div>
+  <div class="fade-in">
+    <div class="form-group"><label class="form-label">Dein Name</label><input type="text" class="form-control" placeholder="Wie soll ich dich ansprechen?"></div>
+    <div class="form-group"><label class="form-label">E-Mail</label><input type="email" class="form-control" placeholder="deine@email.de"></div>
+    <div class="form-group"><label class="form-label">Was bewegt dich gerade?</label><textarea class="form-control" placeholder="Erzähl mir, was dich herführt — keine perfekte Formulierung nötig."></textarea></div>
+    <button class="btn-primary" onclick="sendContactForm(this,'biz')" style="width:100%;text-align:center;border:none;padding:1rem;">Nachricht senden →</button>
+  </div>
+</section>
 </main>
 
 <!-- FOOTER -->
@@ -568,10 +561,6 @@ html.js-ready .fade-in.visible { opacity:1; transform:translateY(0); }
 </footer>
 
 <script>
-
-  );
-    setTimeout(initObserver, 300);
-  }
 
   document.documentElement.classList.add('js-ready');
 
@@ -610,7 +599,7 @@ html.js-ready .fade-in.visible { opacity:1; transform:translateY(0); }
     nav.style.padding = window.scrollY > 80 ? '1rem 4rem' : '1.4rem 4rem';
   });
 
-  var CALENDLY_URL = 'https://calendly.com/maria-sicheneder/erstgespraech';
+  var CALENDLY_URL = 'https://calendly.com';
   function openCalendly(e) {
     try {
       if (e) { e.preventDefault(); e.stopPropagation(); }
