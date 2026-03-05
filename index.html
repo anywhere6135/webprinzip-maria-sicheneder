@@ -74,11 +74,11 @@ nav {
 
 
 /* HERO */
-.hero { min-height:100vh; display:grid; grid-template-columns:1fr 1fr; align-items:center; position:relative; overflow:hidden; padding-top:9rem; }
+.hero { min-height:100vh; display:grid; grid-template-columns:1fr 1fr; align-items:center; position:relative; overflow:hidden; }
 .hero-bg { position:absolute; inset:0; pointer-events:none; }
-.hero-bg.biz { background: radial-gradient(ellipse 80% 60% at 70% 40%, rgba(196,152,122,0.08) 0%, transparent 60%), radial-gradient(ellipse 60% 80% at 20% 70%, rgba(74,92,71,0.06) 0%, transparent 60%); }
+.hero-bg.biz { background: none; }
 .hero-bg.priv { background: radial-gradient(ellipse 70% 60% at 75% 35%, rgba(192,139,122,0.1) 0%, transparent 60%), radial-gradient(ellipse 50% 70% at 15% 75%, rgba(122,110,138,0.07) 0%, transparent 60%); }
-.hero-left { padding:2rem 4rem 5rem 6rem; position:relative; z-index:2; animation:fadeUp 0.8s ease forwards; }
+.hero-left { padding:8rem 4rem 5rem 6rem; position:relative; z-index:2; animation:fadeUp 0.8s ease forwards; }
 .hero-eyebrow { font-size:0.75rem; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1.8rem; display:flex; align-items:center; gap:0.8rem; }
 .hero-eyebrow::before { content:''; width:2rem; height:1px; display:block; }
 .biz .hero-eyebrow { color:var(--clay); } .biz .hero-eyebrow::before { background:var(--clay); }
@@ -88,7 +88,7 @@ nav {
 .priv .hero h1 em { font-style:italic; color:var(--dusk); }
 .hero-sub { font-size:1rem; line-height:1.75; color:var(--mist); max-width:44ch; margin-bottom:2.5rem; font-weight:300; }
 .hero-cta-group { display:flex; align-items:center; gap:2rem; }
-.hero-right { position:relative; height:100vh; overflow:hidden; padding-top:9rem; }
+.hero-right { position:relative; height:calc(100vh - 6rem); overflow:hidden; display:flex; align-items:center; justify-content:center; }
 .hero-right img { width:100%; height:100%; object-fit:cover; object-position:center top; }
 .hero-scroll { position:absolute; bottom:2rem; left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:0.5rem; color:var(--mist); font-size:0.68rem; letter-spacing:0.15em; text-transform:uppercase; z-index:10; }
 .scroll-line { width:1px; height:2.5rem; animation:scrollPulse 2s ease-in-out infinite; }
@@ -369,7 +369,9 @@ html.js-ready .fade-in.visible { opacity:1; transform:translateY(0); }
     </div>
   </div>
   <div class="hero-right">
-    <img src="hero.jpg" alt="Maria Sicheneder" loading="eager">
+    <div style="width:72%;aspect-ratio:4/5;border-radius:60% 40% 50% 50%/60% 50% 50% 40%;overflow:hidden;border:1px solid rgba(196,152,122,0.25);">
+      <img src="hero.jpg" alt="Maria Sicheneder" loading="eager" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+    </div>
   </div>
   <div class="hero-scroll"><div class="scroll-line"></div>Scroll</div>
 </section>
